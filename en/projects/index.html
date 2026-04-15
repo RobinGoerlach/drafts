@@ -1,11 +1,300 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placeholder</title>
+
+  <title>Projects – Robin Görlach</title>
+  <meta
+    name="description"
+    content="A selection of projects, ideas and technical work across software, systems and infrastructure."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+          boxShadow: {
+            soft: "0 6px 18px rgba(43, 47, 51, 0.06)",
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <p>Placeholder page.</p>
+
+<body class="bg-paper text-textmain font-sans">
+  <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">
+          Robin Görlach
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-textsub md:flex">
+          <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+          <a href="/en/projects/" class="text-textmain">Projects</a>
+          <a href="/en/notes/" class="hover:text-accent transition-colors">Notes</a>
+          <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+          <a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
+          <a href="/en/about/" class="hover:text-accent transition-colors">About</a>
+          <a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="hidden text-sm text-textsub sm:block">
+            <a href="/de/projekte/" class="hover:text-accent transition-colors">DE</a>
+            <span class="mx-1 text-black/20">|</span>
+            <a href="/en/projects/" class="text-textmain">EN</a>
+          </div>
+
+          <button
+            id="menu-toggle"
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm text-textsub">
+          <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+          <a href="/en/projects/" class="text-textmain">Projects</a>
+          <a href="/en/notes/" class="hover:text-accent transition-colors">Notes</a>
+          <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+          <a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
+          <a href="/en/about/" class="hover:text-accent transition-colors">About</a>
+          <a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a>
+          <div class="pt-2 text-textsub">
+            <a href="/de/projekte/" class="hover:text-accent transition-colors">DE</a>
+            <span class="mx-1 text-black/20">|</span>
+            <a href="/en/projects/" class="text-textmain">EN</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-5xl px-6 py-14 md:py-20">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Selection</p>
+        <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Projects</h1>
+
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
+          <p>
+            This page is not just about finished products. Some work is already well underway,
+            some is still taking shape, and some is intentionally kept at the level of a concept
+            or a technical foundation. Taken together, it shows the kinds of problems and structures
+            I tend to work on.
+          </p>
+          <p>
+            The common thread is usually the same: software and systems should remain understandable,
+            useful and maintainable over time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="mb-10 max-w-3xl">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">Selected work and ongoing ideas</h2>
+          <p class="text-textsub leading-relaxed">
+            The selection below mixes ongoing work, technical building blocks and projects that are
+            deliberately meant as foundations for future applications.
+          </p>
+        </div>
+
+        <div class="grid gap-6">
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">NimbusJS / NimbusStack</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">ecosystem</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">ongoing</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              A JavaScript ecosystem with its own framework core, suite and supporting services.
+              The interesting part is not “yet another framework”, but the attempt to build a
+              coherent technical foundation that can support several projects over time.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              What matters here is the architectural side of it: naming, separation of concerns,
+              reuse, and the question of how a technical base can stay clear instead of growing
+              into a pile of unrelated pieces.
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">SASD\Mustela Logging</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">PHP</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">building block</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              A logging framework built around appenders, formatters and configurable targets.
+              It is meant as a reusable base rather than a one-off component for a single project.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Its value lies less in visual appeal and more in structure, extension points and the
+              ability to solve a recurring technical need in a clean way instead of redoing it each time.
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">REST services for authentication, profiles and projects</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">PHP</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">service architecture</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              A set of separate services for authentication, profile management and project logic,
+              each with a clear responsibility and a structure that can be reused beyond a single application.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Work like this rarely looks spectacular on the surface, but it says a lot about how someone thinks:
+              boundaries, responsibilities, security concerns and long-term maintainability.
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">SASD CMS / web presence</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">vanilla JS + PHP</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">ongoing</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              A deliberately restrained approach to a web presence and later CMS foundation:
+              no unnecessary framework layers, but a clean structure built on tools that remain transparent.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Part of the appeal is exactly that question: how far can you get with well-understood,
+              simple technology before extra abstraction actually becomes useful?
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">Linux, security and infrastructure work</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">systems</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">practical work</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              Not every meaningful project is a single application. A substantial part of my work sits in Linux,
+              administration, hardening, infrastructure, automation and the question of how systems can stay stable
+              and understandable.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              That includes scripts, configurations, test environments, security considerations and the sort of
+              technical groundwork that often matters more than the visible surface later on.
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">Time tracking and access control with Raspberry Pi / RFID</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">hardware-adjacent</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">concept + implementation</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              A project at the intersection of hardware, software and practical operations:
+              time tracking and potentially access control using Raspberry Pi, RFID, display hardware and custom logic.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Projects like this are particularly interesting to me because they connect several layers at once —
+              electronics, device setup, application logic, data handling and real-world use.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="rounded-sm border border-black/10 bg-paper p-6">
+            <h2 class="mb-4 font-serif text-2xl text-textmain">What this selection is meant to show</h2>
+            <p class="leading-relaxed text-textsub">
+              The point is not to present every idea as a polished product. What matters more is the range:
+              services, infrastructure, system design, reusable building blocks and projects that grew out of
+              practical needs rather than trend-driven language.
+            </p>
+          </div>
+
+          <div class="rounded-sm border border-black/10 bg-paper p-6">
+            <h2 class="mb-4 font-serif text-2xl text-textmain">What may still be added later</h2>
+            <p class="leading-relaxed text-textsub">
+              This page will probably grow over time. Some items deserve detailed project pages later on,
+              while others may remain sketches or workshop notes. Both are perfectly fine, as long as they
+              lead to something useful.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="max-w-3xl border-t border-black/10 pt-10">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">And beyond that</h2>
+          <p class="text-textsub leading-relaxed">
+            If you prefer to enter through tools, topics or technical notes, the other sections offer different ways in.
+            Projects are only one part of the whole — even if they are an important one.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10 py-8">
+    <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+      <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+      <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+        <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="/en/about/" class="hover:text-accent transition-colors">About</a>
+        <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+        <a href="/de/projekte/" class="hover:text-accent transition-colors">Deutsch</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute("aria-expanded", String(isHidden));
+      });
+    }
+  </script>
 </body>
 </html>

@@ -3,9 +3,304 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placeholder</title>
+
+  <title>Projekte – Robin Görlach</title>
+  <meta
+    name="description"
+    content="Eine Auswahl von Projekten, Ideen und Vorhaben aus Software, Systemen, Infrastruktur und angrenzenden Bereichen."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+          boxShadow: {
+            soft: "0 6px 18px rgba(43, 47, 51, 0.06)",
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <p>Placeholder page.</p>
+
+<body class="bg-paper text-textmain font-sans">
+  <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">
+          Robin Görlach
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-textsub md:flex">
+          <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+          <a href="/de/projekte/" class="text-textmain">Projekte</a>
+          <a href="/de/notizen/" class="hover:text-accent transition-colors">Notizen</a>
+          <a href="/de/themen/" class="hover:text-accent transition-colors">Themen</a>
+          <a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
+          <a href="/de/ueber/" class="hover:text-accent transition-colors">Über</a>
+          <a href="/de/kontakt/" class="hover:text-accent transition-colors">Kontakt</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="hidden text-sm text-textsub sm:block">
+            <a href="/de/projekte/" class="text-textmain">DE</a>
+            <span class="mx-1 text-black/20">|</span>
+            <a href="/en/projects/" class="hover:text-accent transition-colors">EN</a>
+          </div>
+
+          <button
+            id="menu-toggle"
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm text-textsub">
+          <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+          <a href="/de/projekte/" class="text-textmain">Projekte</a>
+          <a href="/de/notizen/" class="hover:text-accent transition-colors">Notizen</a>
+          <a href="/de/themen/" class="hover:text-accent transition-colors">Themen</a>
+          <a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
+          <a href="/de/ueber/" class="hover:text-accent transition-colors">Über</a>
+          <a href="/de/kontakt/" class="hover:text-accent transition-colors">Kontakt</a>
+          <div class="pt-2 text-textsub">
+            <a href="/de/projekte/" class="text-textmain">DE</a>
+            <span class="mx-1 text-black/20">|</span>
+            <a href="/en/projects/" class="hover:text-accent transition-colors">EN</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-5xl px-6 py-14 md:py-20">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Auswahl</p>
+        <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Projekte</h1>
+
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
+          <p>
+            Hier steht nicht nur Fertiges. Einiges ist schon weiter gediehen, anderes noch im Aufbau,
+            manches bewusst als Konzept oder Versuch angelegt. Zusammen zeigt die Seite vor allem,
+            in welche Richtungen ich denke und arbeite.
+          </p>
+          <p>
+            Der gemeinsame Nenner ist meist derselbe: Software und Systeme sollen nachvollziehbar,
+            brauchbar und über längere Zeit wartbar bleiben.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="mb-10 max-w-3xl">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">Ausgewählte Arbeiten und Vorhaben</h2>
+          <p class="text-textsub leading-relaxed">
+            Die folgende Auswahl mischt laufende Arbeiten, technische Grundlagenprojekte und Dinge,
+            die als Konzept oder Baukasten für spätere Anwendungen gedacht sind.
+          </p>
+        </div>
+
+        <div class="grid gap-6">
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">NimbusJS / NimbusStack</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">Ökosystem</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">laufend</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              Ein eigenes JavaScript-Ökosystem mit Framework-Kern, Suite und ergänzenden Diensten.
+              Dahinter steht weniger der Wunsch, „noch ein Framework“ zu bauen, sondern eher die
+              Frage, wie sich eine durchdachte, gut strukturierte und langfristig tragfähige Grundlage
+              für mehrere Projekte schaffen lässt.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Interessant ist daran vor allem der architektonische Gedanke: Namensraum, Wiederverwendbarkeit,
+              saubere Trennung von Kern und Diensten sowie die Möglichkeit, darauf weitere Werkzeuge aufzubauen.
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">SASD\Mustela Logging</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">PHP</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">Framework-Baustein</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              Ein Logging-Framework, das sich an der Idee von Appendern, Formattern und konfigurierbaren
+              Zielen orientiert. Es ist als wiederverwendbare Grundlage gedacht, nicht nur für ein einziges
+              Projekt, sondern für mehrere Anwendungen mit ähnlichen Anforderungen.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Der Reiz liegt hier weniger im spektakulären Funktionsumfang als in sauberer Struktur,
+              nachvollziehbarer Erweiterbarkeit und der Frage, wie man wiederkehrende technische Probleme
+              ordentlich löst, statt sie in jedem Projekt neu zu improvisieren.
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">REST-Services für Authentifizierung, Profile und Projekte</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">PHP</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">Service-Architektur</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              Mehrere eigenständige Dienste für Authentifizierung, Profilverwaltung und Projektlogik,
+              jeweils mit klaren Zuständigkeiten und einer Architektur, die sich auch in anderen Anwendungen
+              wiederverwenden lässt. Dazu gehört die bewusste Trennung von HTTP-Schicht, Geschäftslogik,
+              Datenzugriff und Sicherheitsfragen.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Solche Projekte sind weniger Showobjekte als strukturelle Arbeit. Gerade deshalb sagen sie
+              oft mehr darüber aus, wie jemand denkt, als eine einzelne hübsche Oberfläche es könnte.
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">SASD CMS / Webauftritt</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">Vanilla JS + PHP</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">laufend</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              Der Ansatz dahinter ist bewusst nüchtern: kein schweres Framework um des Frameworks willen,
+              sondern eine Seite und spätere CMS-Grundlage mit klarer Struktur, ruhiger Technikbasis und
+              möglichst wenig unnötiger Komplexität.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Gerade darin steckt für mich ein interessantes Spannungsfeld: Wie weit kommt man mit einfachen,
+              gut verstandenen Werkzeugen, bevor zusätzliche Schichten wirklich einen Mehrwert bringen?
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">Linux-, Sicherheits- und Infrastrukturarbeit</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">Systeme</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">Praxis</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              Nicht jedes wichtige Projekt ist eine einzelne Anwendung. Ein Teil meiner Arbeit liegt in Linux,
+              Administration, Härtung, Infrastruktur, Automatisierung und der Frage, wie Systeme stabil und
+              nachvollziehbar betrieben werden können.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Dazu gehören Skripte, Konfigurationen, Testumgebungen, Sicherheitsüberlegungen und Werkzeuge,
+              die oft weniger sichtbar sind, für spätere Projekte aber die eigentliche Grundlage bilden.
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="font-serif text-2xl text-textmain">Zeiterfassung und Zugang mit Raspberry Pi / RFID</h3>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">Embedded-Nähe</span>
+              <span class="rounded-sm border border-black/10 px-2 py-1 text-xs uppercase tracking-wide text-textsub">Konzept + Umsetzung</span>
+            </div>
+            <p class="leading-relaxed text-textsub">
+              Ein Projekt an der Schnittstelle von Hardware, Software und praktischem Betrieb:
+              Zeiterfassung und perspektivisch auch Zugangskontrolle mit Raspberry Pi, RFID,
+              Display und eigener Anwendungslogik.
+            </p>
+            <p class="mt-4 leading-relaxed text-textsub">
+              Genau solche Vorhaben interessieren mich, weil sie mehrere Ebenen verbinden — von Elektronik
+              und Geräteaufbau bis zu Datenmodell, Anwendung und späterem Alltagseinsatz.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="rounded-sm border border-black/10 bg-paper p-6">
+            <h2 class="mb-4 font-serif text-2xl text-textmain">Was diese Auswahl zeigen soll</h2>
+            <p class="leading-relaxed text-textsub">
+              Mir geht es hier nicht darum, jede Idee als fertiges Produkt zu präsentieren.
+              Interessanter ist für mich die Bandbreite: Dienste, Infrastruktur, Systemdenken,
+              Werkzeuge, wiederverwendbare Bausteine und Projekte, die eher aus praktischen
+              Anforderungen als aus Trendbegriffen entstanden sind.
+            </p>
+          </div>
+
+          <div class="rounded-sm border border-black/10 bg-paper p-6">
+            <h2 class="mb-4 font-serif text-2xl text-textmain">Was noch dazukommen kann</h2>
+            <p class="leading-relaxed text-textsub">
+              Die Seite wird mit der Zeit sicher wachsen. Einige Vorhaben verdienen später eigene
+              Detailseiten, andere bleiben vielleicht eher Skizzen oder Werkstattnotizen.
+              Beides ist in Ordnung — solange daraus etwas Brauchbares entsteht.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="max-w-3xl border-t border-black/10 pt-10">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">Und sonst</h2>
+          <p class="text-textsub leading-relaxed">
+            Wer eher über Werkzeuge, Themen oder technische Notizen einsteigen möchte, findet auf den
+            übrigen Seiten andere Zugänge. Projekte sind nur ein Teil des Ganzen — wenn auch ein wichtiger.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10 py-8">
+    <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+      <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+      <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+        <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+        <a href="/de/ueber/" class="hover:text-accent transition-colors">Über</a>
+        <a href="/de/themen/" class="hover:text-accent transition-colors">Themen</a>
+        <a href="/en/projects/" class="hover:text-accent transition-colors">English</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute("aria-expanded", String(isHidden));
+      });
+    }
+  </script>
 </body>
 </html>
