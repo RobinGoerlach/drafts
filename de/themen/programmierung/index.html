@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Software & Programmierung – Robin Görlach</title>
-  <meta name="description" content="Software & Programmierung" />
+  <meta name="description" content="Gedanken, Notizen und praktische Erfahrungen rund um Programmierung, Werkzeuge, Architektur und wartbare Software." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,75 +13,41 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            paper: "#F5F3EE",
-            section: "#E7E2D8",
-            textmain: "#2B2F33",
-            textsub: "#4E5B61",
-            accent: "#1F4E5F",
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            serif: ['"Source Serif 4"', "serif"],
-          },
-          boxShadow: {
-            soft: "0 6px 18px rgba(43,47,51,0.06)",
-          },
-        },
-      },
-    };
+          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
+          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
+        }
+      }
+    }
   </script>
 </head>
 <body class="bg-paper text-textmain font-sans">
+
 <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
   <div class="mx-auto max-w-6xl px-6">
     <div class="flex h-16 items-center justify-between">
       <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
-<a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
-<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
-<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
-<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
-      <div class="flex items-center gap-4">
-        <div class="hidden text-sm text-textsub sm:block">
-          <span class="text-textmain">DE</span>
-          <span class="mx-1 text-black/20">|</span>
-          <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
-        </div>
-        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
-        </button>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a><a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a><a href="/de/themen/index.html" class="text-textmain">Themen</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+      <div class="hidden text-sm text-textsub sm:block">
+        <a href="/de/index.html" class="text-textmain">DE</a>
+        <span class="mx-1 text-black/20">|</span>
+        <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
-      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
-<a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
-<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
-<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
-<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
-    </div>
   </div>
-</header><main><section class="mx-auto max-w-5xl px-6 py-16"><h1 class="mb-6 font-serif text-4xl">Software & Programmierung</h1><p class="leading-relaxed text-textsub">Diese Seite ist als nächste Ausbaustufe vorgesehen und dient im aktuellen Stand als Platzhalter.</p></section></main>
+</header>
+<main><section class="mx-auto max-w-5xl px-6 py-16"><h1 class="mb-6 font-serif text-4xl">Software &amp; Programmierung</h1><div class="space-y-4 leading-relaxed text-textsub"><p>Programmierung begleitet viele technische Themen, aber sie ist selten nur eine Frage der Sprache. Wichtiger ist oft, wie ein Problem verstanden, zerlegt und schließlich so gelöst wird, dass der Code auch später noch lesbar und brauchbar bleibt.</p><p>Auf dieser Seite geht es deshalb nicht nur um einzelne Sprachen, sondern auch um Werkzeuge, Struktur, Wartbarkeit und die Frage, wie Software über längere Zeit sinnvoll weiterentwickelt werden kann.</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl space-y-12 px-6"><div><h2 class="mb-3 font-serif text-2xl">C, C++ und systemnahe Entwicklung</h2><p class="leading-relaxed text-textsub">C und C++ sind dort interessant, wo man näher an Systemen, Werkzeugen, Performance oder Hardware arbeitet. Gerade in diesen Bereichen zeigt sich oft sehr deutlich, wie eng Struktur, Sorgfalt und Verständnis zusammenhängen.</p></div><div><h2 class="mb-3 font-serif text-2xl">Java und C#</h2><p class="leading-relaxed text-textsub">Java und C# stehen eher für größere Anwendungen, klare Strukturen und Umgebungen, in denen Wartbarkeit und Erweiterbarkeit eine wichtige Rolle spielen.</p></div><div><h2 class="mb-3 font-serif text-2xl">PHP und pragmatische Webentwicklung</h2><p class="leading-relaxed text-textsub">PHP ist für viele Webanwendungen und Dienste nach wie vor ein sehr brauchbares Werkzeug. Interessant ist dabei vor allem die Verbindung aus vergleichsweise direktem Einstieg, breiter Verfügbarkeit und der Möglichkeit, auch größere Strukturen sauber aufzubauen.</p><p class="mt-3 leading-relaxed text-textsub">Gerade wenn Wartbarkeit, Verständlichkeit und pragmatische Lösungen gefragt sind, bleibt PHP für mich ein naheliegendes Arbeitsfeld.</p></div><div><h2 class="mb-3 font-serif text-2xl">JavaScript und Webentwicklung</h2><p class="leading-relaxed text-textsub">JavaScript gehört heute selbstverständlich zur Webentwicklung, im Browser ebenso wie auf der Serverseite. Interessant ist hier nicht nur die Sprache selbst, sondern das Zusammenspiel mit HTML, CSS, Frameworks, APIs und modernen Entwicklungswerkzeugen.</p></div><div><h2 class="mb-3 font-serif text-2xl">Frühere Werkzeuge und gewachsene Wege</h2><p class="leading-relaxed text-textsub">Programmierung beginnt nicht immer mit den heutigen Werkzeugen. Frühe Erfahrungen mit Taschenrechnern, Pascal, Assembler, Fortran oder anderen Systemen prägen oft die Art, wie Probleme später betrachtet werden.</p></div></div></section><section class="mx-auto max-w-5xl px-6 py-16"><h2 class="mb-6 font-serif text-3xl">Struktur, Architektur &amp; Wartbarkeit</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Gute Software entsteht selten nur aus funktionierendem Code. Wichtig ist auch, ob sich Zusammenhänge nachvollziehen lassen, ob Verantwortlichkeiten sauber getrennt sind und ob sich ein System später erweitern oder reparieren lässt.</p><p>Dazu gehören Fragen wie Namensgebung, Lesbarkeit, Fehlersuche, Dokumentation, Testbarkeit und die Bereitschaft, vorhandene Lösungen immer wieder kritisch anzuschauen.</p><p>Gerade bei gewachsenen Projekten zeigt sich, wie wichtig Refactoring, saubere Schnittstellen und ein gewisser architektonischer Überblick sind.</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><h2 class="mb-6 font-serif text-3xl">Werkzeuge &amp; Arbeitsweise</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Zur praktischen Arbeit gehören natürlich auch Editoren, IDEs, Debugger, Build-Werkzeuge, Versionsverwaltung und kleine Helfer für den Alltag. Werkzeuge wie Visual Studio, Visual Studio Code, Git oder Shell-Skripte sind dabei nicht Selbstzweck, sondern Teil einer Arbeitsweise, die Wiederholbarkeit und Übersicht unterstützt.</p><p>Debugging, Refactoring und schrittweises Verbessern gehören für mich dabei ebenso zur Programmierung wie das eigentliche Schreiben von Code.</p></div></div></section><section class="mx-auto max-w-5xl px-6 py-16"><h2 class="mb-6 font-serif text-3xl">Web, Backend &amp; Dienste</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Viele aktuelle Projekte bewegen sich im Umfeld von Webanwendungen, REST-Schnittstellen, Backend-Logik und Oberflächen. Dabei treffen klassische Fragen der Softwareentwicklung auf Themen wie Routing, Zustandsverwaltung, Authentifizierung und Datenhaltung.</p><p>Interessant wird es dort, wo sich nicht nur eine Anwendung bauen lässt, sondern wo auch die Struktur dahinter tragfähig bleibt: Services, Trennung von Verantwortlichkeiten, Logging, Fehlerbehandlung und die Frage, wie aus einzelnen Bausteinen ein verständliches Ganzes wird.</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><h2 class="mb-6 font-serif text-3xl">Notizen &amp; Einstiege</h2><ul class="space-y-3 text-textsub"><li>• Fehler suchen, bevor man nur Symptome bekämpft</li><li>• Code umstrukturieren, ohne ihn unnötig zu verkomplizieren</li><li>• Werkzeuge bewusst einsetzen statt ihnen blind zu folgen</li><li>• APIs und Services so bauen, dass sie später noch verständlich sind</li><li>• Kleine Hilfsprogramme und größere Anwendungen nicht nach denselben Maßstäben beurteilen</li></ul><p class="mt-6"><a href="/de/notizen/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Weiter zu den Notizen</a></p></div></section></main>
 <footer class="border-t border-black/10 py-8">
   <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
     <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/en/index.html" class="hover:text-accent transition-colors">English</a></nav>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+      <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+      <a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+      <a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
+      <a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a>
+    </nav>
   </div>
 </footer>
-<script>
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.contains("hidden");
-    mobileMenu.classList.toggle("hidden");
-    menuToggle.setAttribute("aria-expanded", String(isHidden));
-  });
-}
-</script>
+
 </body>
 </html>

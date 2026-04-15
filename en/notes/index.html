@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Notes – Robin Görlach</title>
-  <meta name="description" content="Notes, technical fragments and practical pointers that prove useful over time." />
+  <meta name="description" content="Technical notes, fragments and practical reminders that stay useful." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,83 +13,41 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            paper: "#F5F3EE",
-            section: "#E7E2D8",
-            textmain: "#2B2F33",
-            textsub: "#4E5B61",
-            accent: "#1F4E5F",
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            serif: ['"Source Serif 4"', "serif"],
-          },
-          boxShadow: {
-            soft: "0 6px 18px rgba(43,47,51,0.06)",
-          },
-        },
-      },
-    };
+          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
+          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
+        }
+      }
+    }
   </script>
 </head>
 <body class="bg-paper text-textmain font-sans">
+
 <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
   <div class="mx-auto max-w-6xl px-6">
     <div class="flex h-16 items-center justify-between">
       <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
-<a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a>
-<a href="/en/notes/index.html" class="text-textmain">Notes</a>
-<a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
-<a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
-<a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a>
-<a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
-      <div class="flex items-center gap-4">
-        <div class="hidden text-sm text-textsub sm:block">
-          <span class="text-textmain">EN</span>
-          <span class="mx-1 text-black/20">|</span>
-          <a href="/de/index.html" class="hover:text-accent transition-colors">DE</a>
-        </div>
-        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
-        </button>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a><a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a><a href="/en/notes/index.html" class="text-textmain">Notes</a><a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a><a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a><a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a><a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
+      <div class="hidden text-sm text-textsub sm:block">
+        <a href="/de/index.html" class="hover:text-accent transition-colors">DE</a>
+        <span class="mx-1 text-black/20">|</span>
+        <a href="/en/index.html" class="text-textmain">EN</a>
       </div>
-    </div>
-    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
-      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
-<a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a>
-<a href="/en/notes/index.html" class="text-textmain">Notes</a>
-<a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
-<a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
-<a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a>
-<a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
     </div>
   </div>
 </header>
-<main><section class="mx-auto max-w-5xl px-6 py-14 md:py-20"><div class="max-w-3xl"><p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Collection</p><h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Notes</h1><div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg"><p>Not everything needs to become a full article or a carefully structured topic. Some things are simply too small, too specific or too situational.</p><p>This page collects that kind of material — notes that proved useful in practice and are often easier to find here later than through a search engine.</p><p>Over time, some of these may grow into fuller write-ups. Others are probably most useful exactly as they are: short, practical and easy to revisit.</p></div></div></section>
-<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="grid gap-6 md:grid-cols-2">
-<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Linux & Administration</h2><p class="mb-4 leading-relaxed text-textsub">Short practical notes around servers, services, configuration and recurring problems.</p></article>
-<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Programming & Tools</h2><p class="mb-4 leading-relaxed text-textsub">Debugging notes, recurring pitfalls and small tools worth remembering.</p></article>
-<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Databases & Data Models</h2><p class="mb-4 leading-relaxed text-textsub">Practical notes for queries, structure, performance and recognising old mistakes early.</p></article>
-<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Electronics, Practice & Fragments</h2><p class="mb-4 leading-relaxed text-textsub">Small practical observations and notes somewhere between hardware, workshop and everyday use.</p></article>
-</div></div></section></main>
-
+<main><section class="mx-auto max-w-5xl px-6 py-14 md:py-20"><div class="max-w-3xl"><p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Collection</p><h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Notes</h1><div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg"><p>Not everything needs a full article or a polished structure. Some things are too small, too specific or simply too situational.</p><p>This page collects notes of that kind — things that proved useful in practice or that are often easier to find here later than through a search engine.</p><p>The value of such a page does not come from perfection. It comes from being useful when a small detail needs to be checked again without starting from scratch.</p></div></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="grid gap-6 md:grid-cols-2"><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Linux &amp; Administration</h2><p class="mb-4 leading-relaxed text-textsub">Small practical things from everyday work: commands, checks, logs, SSH, services, configuration and the habit of narrowing problems down instead of guessing.</p></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Programming &amp; Tools</h2><p class="mb-4 leading-relaxed text-textsub">Debugging, refactoring, everyday helpers and ways of working that proved useful over time.</p></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Databases &amp; models</h2><p class="mb-4 leading-relaxed text-textsub">SQL, data models, indexes and the small differences between something that works and something that lasts.</p></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Electronics, practice &amp; fragments</h2><p class="mb-4 leading-relaxed text-textsub">Some notes start as practical questions, small ideas or useful fragments and only find a more precise place later on.</p></article></div></div></section></main>
 <footer class="border-t border-black/10 py-8">
   <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
     <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a><a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a><a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a><a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a><a href="/de/index.html" class="hover:text-accent transition-colors">Deutsch</a></nav>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+      <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+      <a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
+      <a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
+      <a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a>
+    </nav>
   </div>
 </footer>
-<script>
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.contains("hidden");
-    mobileMenu.classList.toggle("hidden");
-    menuToggle.setAttribute("aria-expanded", String(isHidden));
-  });
-}
-</script>
+
 </body>
 </html>

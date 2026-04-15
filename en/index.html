@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robin Görlach</title>
-  <meta name="description" content="Technology, projects and topics that have mattered to me over time." />
+  <meta name="description" content="Technology, projects and topics that have stayed with me over time." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,107 +13,43 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            paper: "#F5F3EE",
-            section: "#E7E2D8",
-            textmain: "#2B2F33",
-            textsub: "#4E5B61",
-            accent: "#1F4E5F",
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            serif: ['"Source Serif 4"', "serif"],
-          },
-          boxShadow: {
-            soft: "0 6px 18px rgba(43,47,51,0.06)",
-          },
-        },
-      },
-    };
+          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
+          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
+        }
+      }
+    }
   </script>
 </head>
 <body class="bg-paper text-textmain font-sans">
+
 <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
   <div class="mx-auto max-w-6xl px-6">
     <div class="flex h-16 items-center justify-between">
       <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/en/index.html" class="text-textmain">Home</a>
-<a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a>
-<a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
-<a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
-<a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
-<a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a>
-<a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
-      <div class="flex items-center gap-4">
-        <div class="hidden text-sm text-textsub sm:block">
-          <span class="text-textmain">EN</span>
-          <span class="mx-1 text-black/20">|</span>
-          <a href="/de/index.html" class="hover:text-accent transition-colors">DE</a>
-        </div>
-        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
-        </button>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/en/index.html" class="text-textmain">Home</a><a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a><a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a><a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a><a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a><a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a><a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
+      <div class="hidden text-sm text-textsub sm:block">
+        <a href="/de/index.html" class="hover:text-accent transition-colors">DE</a>
+        <span class="mx-1 text-black/20">|</span>
+        <a href="/en/index.html" class="text-textmain">EN</a>
       </div>
-    </div>
-    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
-      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/en/index.html" class="text-textmain">Home</a>
-<a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a>
-<a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
-<a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
-<a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
-<a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a>
-<a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
     </div>
   </div>
 </header>
 <main>
-<section class="mx-auto max-w-6xl px-6 py-14 md:py-20">
-  <div class="grid items-center gap-10 md:grid-cols-[240px_minmax(0,1fr)] lg:grid-cols-[280px_minmax(0,1fr)]">
-    <div class="mx-auto w-full max-w-[240px] md:mx-0 lg:max-w-[280px]">
-      <figure class="overflow-hidden rounded-sm border border-black/10 bg-section shadow-soft">
-        <img src="/assets/img/avatar.jpg" alt="Portrait of Robin Görlach" class="block h-auto w-full object-cover" />
-      </figure>
-    </div>
-    <div class="max-w-3xl">
-      <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Welcome</p>
-      <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Robin Görlach</h1>
-      <p class="mt-5 font-serif text-xl leading-relaxed text-textmain md:text-2xl">Technology, projects and topics that have mattered to me over time.</p>
-      <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
-        <p>This site brings together work, notes and reflections from <a href="/en/topics/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">IT</a>, <a href="/en/topics/linux/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linux</a>, <a href="/en/topics/administration/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">administration</a>, <a href="/en/topics/programming/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">programming</a>, <a href="/en/topics/electronics/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">electronics</a>, <a href="/en/topics/databases/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">databases</a>, <a href="/en/topics/data-analysis/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">data analysis</a> and a few other areas.</p>
-        <p>Some of those are clearly technical, others have simply stayed around because they kept proving useful or interesting.</p>
-        <p>Quite a bit has accumulated here — perhaps some of it will be useful or interesting to others as well as to me.</p>
-        <p class="mt-6 text-sm text-textsub leading-relaxed">Focus areas: <span class="text-textmain">Linux</span>, <span class="text-textmain">system administration &amp; security</span>, <span class="text-textmain">software development</span>, <span class="text-textmain">databases</span>, <span class="text-textmain">architecture &amp; automation</span></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-section py-16">
-  <div class="mx-auto max-w-5xl px-6">
-    <div class="mb-10 max-w-3xl">
-      <h2 class="mb-4 font-serif text-3xl text-textmain">What this is about</h2>
-      <p class="text-textsub leading-relaxed">At the centre are <a href="/en/topics/linux/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linux &amp; administration</a>, <a href="/en/topics/programming/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">programming</a>, <a href="/en/topics/electronics/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">electronics</a> and <a href="/en/topics/databases/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">databases</a>. Other things come more from everyday life, practical interests or questions that have stayed around over time. Not everything belongs in the same drawer, but that is often what makes collections like this useful.</p>
-    </div>
-  </div>
-</section>
-</main>
-
+<section class="mx-auto max-w-6xl px-6 py-14 md:py-20"><div class="grid items-center gap-10 md:grid-cols-[240px_minmax(0,1fr)] lg:grid-cols-[280px_minmax(0,1fr)]"><div class="mx-auto w-full max-w-[240px] md:mx-0 lg:max-w-[280px]"><figure class="overflow-hidden rounded-sm border border-black/10 bg-section shadow-soft"><img src="/assets/img/avatar.jpg" alt="Portrait of Robin Görlach" class="block h-auto w-full object-cover" /></figure></div><div class="max-w-3xl"><p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Welcome</p><h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Robin Görlach</h1><p class="mt-5 font-serif text-xl leading-relaxed text-textmain md:text-2xl">Technology, projects and topics that have stayed with me over time.</p><div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg"><p>On this site I collect work, notes and thoughts around <a href="/en/topics/it/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">IT</a>, <a href="/en/topics/linux/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linux</a>, <a href="/en/topics/administration/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">administration</a>, <a href="/en/topics/programming/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">programming</a>, <a href="/en/topics/electronics/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">electronics</a>, <a href="/en/topics/databases/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">databases</a>, <a href="/en/topics/data-analysis/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">data analysis</a> and a few other areas.</p><p>Some of it is directly technical, some of it comes from everyday life, practical interests or questions that stayed around over time.</p><p>A fair amount has gathered here — perhaps some of it will be useful or interesting, for others as well as for myself.</p><p class="mt-6 text-sm text-textsub leading-relaxed">Focus areas: <span class="text-textmain">Linux</span>, <span class="text-textmain">systems administration &amp; security</span>, <span class="text-textmain">software development</span>, <span class="text-textmain">databases</span>, <span class="text-textmain">architecture &amp; automation</span></p></div></div></div></section>
+<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="mb-10 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">What this site is about</h2><p class="text-textsub leading-relaxed">At the centre are <a href="/en/topics/linux/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linux &amp; administration</a>, <a href="/en/topics/programming/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">programming</a>, <a href="/en/topics/electronics/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">electronics</a> and <a href="/en/topics/databases/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">databases</a>, along with related technical themes. There are also areas that grew out of everyday life, practical questions and longer-term interests. Not everything belongs in the same drawer, but that is often what makes a collection like this useful.</p></div></div></section></main>
 <footer class="border-t border-black/10 py-8">
   <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
     <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a><a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a><a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a><a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a><a href="/de/index.html" class="hover:text-accent transition-colors">Deutsch</a></nav>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+      <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+      <a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
+      <a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
+      <a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a>
+    </nav>
   </div>
 </footer>
-<script>
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.contains("hidden");
-    mobileMenu.classList.toggle("hidden");
-    menuToggle.setAttribute("aria-expanded", String(isHidden));
-  });
-}
-</script>
+
 </body>
 </html>

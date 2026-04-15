@@ -13,84 +13,41 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            paper: "#F5F3EE",
-            section: "#E7E2D8",
-            textmain: "#2B2F33",
-            textsub: "#4E5B61",
-            accent: "#1F4E5F",
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            serif: ['"Source Serif 4"', "serif"],
-          },
-          boxShadow: {
-            soft: "0 6px 18px rgba(43,47,51,0.06)",
-          },
-        },
-      },
-    };
+          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
+          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
+        }
+      }
+    }
   </script>
 </head>
 <body class="bg-paper text-textmain font-sans">
+
 <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
   <div class="mx-auto max-w-6xl px-6">
     <div class="flex h-16 items-center justify-between">
       <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
-<a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
-<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
-<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
-<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
-      <div class="flex items-center gap-4">
-        <div class="hidden text-sm text-textsub sm:block">
-          <span class="text-textmain">DE</span>
-          <span class="mx-1 text-black/20">|</span>
-          <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
-        </div>
-        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
-        </button>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a><a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a><a href="/de/themen/index.html" class="text-textmain">Themen</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+      <div class="hidden text-sm text-textsub sm:block">
+        <a href="/de/index.html" class="text-textmain">DE</a>
+        <span class="mx-1 text-black/20">|</span>
+        <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
       </div>
-    </div>
-    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
-      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
-<a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
-<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
-<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
-<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
     </div>
   </div>
 </header>
-<main>
-<section class="mx-auto max-w-5xl px-6 py-16"><h1 class="mb-6 font-serif text-4xl">Datenbanken &amp; Daten</h1><div class="space-y-4 leading-relaxed text-textsub"><p>Datenbanken begleiten viele Systeme über lange Zeit. Während sich Programmiersprachen, Frameworks und Oberflächen schnell verändern, bleiben Datenstrukturen oft über Jahre bestehen.</p><p>Deshalb geht es hier weniger um einzelne Produkte als um Fragen wie: Wie werden Daten sinnvoll strukturiert? Wie bleiben sie auswertbar? Und wie vermeidet man es, dass Systeme mit der Zeit unübersichtlich werden?</p></div></section>
-<section class="bg-section py-16"><div class="mx-auto max-w-5xl space-y-12 px-6"><div><h2 class="mb-3 font-serif text-2xl">MySQL</h2><p class="leading-relaxed text-textsub">MySQL ist in vielen Webanwendungen ein naheliegender Einstieg: schnell verfügbar, weit verbreitet und für viele Aufgaben gut geeignet. Interessant wird es vor allem dann, wenn Systeme wachsen und Struktur, Indizes und Abfragen sauber gestaltet werden müssen.</p></div><div><h2 class="mb-3 font-serif text-2xl">PostgreSQL</h2><p class="leading-relaxed text-textsub">PostgreSQL bietet eine größere Nähe zu klassischen Datenbankkonzepten und erweitert diese um moderne Möglichkeiten. Besonders spannend sind hier komplexere Datenmodelle, saubere Beziehungen und flexible Auswertungen.</p></div><div><h2 class="mb-3 font-serif text-2xl">Oracle</h2><p class="leading-relaxed text-textsub">Oracle begegnet einem meist in größeren und gewachsenen Umgebungen. Neben Leistungsfähigkeit spielen hier Struktur, Stabilität und langfristige Wartbarkeit eine größere Rolle als schnelle Zwischenlösungen.</p><p class="mt-3 leading-relaxed text-textsub">Themen wie PL/SQL, eine saubere Trennung von Logik und Daten sowie durchdachte Datenmodelle rücken stärker in den Mittelpunkt. Im Vergleich zu kleineren Systemen entsteht dadurch ein anderer Blick auf Datenbanken – weniger kurzfristig, dafür nachhaltiger.</p></div></div></section>
-<section class="mx-auto max-w-5xl px-6 py-16"><h2 class="mb-6 font-serif text-3xl">Struktur &amp; Auswertung</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Unabhängig vom System bleibt die zentrale Frage: Wie strukturiert man Daten so, dass sie auch später noch verständlich und nutzbar sind?</p><p>Dazu gehören saubere Tabellenstrukturen, nachvollziehbare Beziehungen und Abfragen, die nicht nur funktionieren, sondern auch wartbar bleiben.</p><p>Oft zeigt sich erst mit der Zeit, ob eine Struktur tragfähig ist. Gerade deshalb lohnt es sich, hier etwas mehr Sorgfalt zu investieren.</p></div></section>
-<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><h2 class="mb-6 font-serif text-3xl">NoSQL &amp; andere Ansätze</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Neben relationalen Datenbanken gibt es auch andere Ansätze, etwa dokumentenorientierte Systeme wie MongoDB. Diese setzen andere Schwerpunkte: mehr Flexibilität in der Struktur, andere Skalierungsmodelle und häufig ein stärkerer Bezug zu verteilten Anwendungen.</p><p>Solche Systeme sind nicht einfach „moderner“, sondern für andere Fragen gedacht. Im Alltag zeigt sich oft, dass relationale Modelle für viele klassische Anwendungen weiterhin sehr gut geeignet sind. Trotzdem ist es hilfreich, die Unterschiede zu kennen und nicht jede Aufgabe automatisch gleich zu lösen.</p></div></div></section>
-<section class="mx-auto max-w-5xl px-6 py-16"><h2 class="mb-6 font-serif text-3xl">Werkzeuge</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Für die praktische Arbeit kommen je nach System und Aufgabenstellung unterschiedliche Werkzeuge zum Einsatz. Dazu gehören grafische Clients wie DBeaver, Oracle SQL Developer oder Toad, aber auch klassische Kommandozeilenwerkzeuge.</p><p>Solche Werkzeuge sind im Alltag wichtig, etwa beim Schreiben und Prüfen von Abfragen, beim Betrachten von Schemata oder beim schnellen Testen von Änderungen. Entscheidend ist am Ende aber weniger das einzelne Tool als eine saubere Struktur und nachvollziehbare Arbeit mit den Daten selbst.</p></div></section>
-<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><h2 class="mb-6 font-serif text-3xl">Notizen &amp; Einstiege</h2><ul class="space-y-3 text-textsub"><li>• SQL-Abfragen strukturieren und lesbar halten</li><li>• Indizes sinnvoll einsetzen</li><li>• Datenmodelle nachvollziehbar aufbauen</li><li>• Performance-Probleme erkennen und eingrenzen</li><li>• Unterschiede zwischen relationalen und dokumentenorientierten Modellen verstehen</li></ul><p class="mt-6"><a href="/de/notizen/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Weiter zu den Notizen</a></p></div></section>
-</main>
-
+<main><section class="mx-auto max-w-5xl px-6 py-16"><h1 class="mb-6 font-serif text-4xl">Datenbanken &amp; Daten</h1><div class="space-y-4 leading-relaxed text-textsub"><p>Datenbanken begleiten viele Systeme über lange Zeit. Während sich Programmiersprachen, Frameworks und Oberflächen schnell verändern, bleiben Datenstrukturen oft über Jahre bestehen.</p><p>Deshalb geht es hier weniger um einzelne Produkte als um Fragen wie: Wie werden Daten sinnvoll strukturiert? Wie bleiben sie auswertbar? Und wie vermeidet man es, dass Systeme mit der Zeit unübersichtlich werden?</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl space-y-12 px-6"><div><h2 class="mb-3 font-serif text-2xl">MySQL</h2><p class="leading-relaxed text-textsub">MySQL ist in vielen Webanwendungen ein naheliegender Einstieg: schnell verfügbar, weit verbreitet und für viele Aufgaben gut geeignet. Interessant wird es vor allem dann, wenn Systeme wachsen und Struktur, Indizes und Abfragen sauber gestaltet werden müssen.</p></div><div><h2 class="mb-3 font-serif text-2xl">PostgreSQL</h2><p class="leading-relaxed text-textsub">PostgreSQL bietet eine größere Nähe zu klassischen Datenbankkonzepten und erweitert diese um moderne Möglichkeiten. Besonders spannend sind hier komplexere Datenmodelle, saubere Beziehungen und flexible Auswertungen.</p></div><div><h2 class="mb-3 font-serif text-2xl">Oracle</h2><p class="leading-relaxed text-textsub">Oracle begegnet einem meist in größeren und gewachsenen Umgebungen. Neben Leistungsfähigkeit spielen hier Struktur, Stabilität und langfristige Wartbarkeit eine größere Rolle als schnelle Zwischenlösungen.</p><p class="mt-3 leading-relaxed text-textsub">Themen wie PL/SQL, eine saubere Trennung von Logik und Daten sowie durchdachte Datenmodelle rücken stärker in den Mittelpunkt. Im Vergleich zu kleineren Systemen entsteht dadurch ein anderer Blick auf Datenbanken – weniger kurzfristig, dafür nachhaltiger.</p></div></div></section><section class="mx-auto max-w-5xl px-6 py-16"><h2 class="mb-6 font-serif text-3xl">Struktur &amp; Auswertung</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Unabhängig vom System bleibt die zentrale Frage: Wie strukturiert man Daten so, dass sie auch später noch verständlich und nutzbar sind?</p><p>Dazu gehören saubere Tabellenstrukturen, nachvollziehbare Beziehungen und Abfragen, die nicht nur funktionieren, sondern auch wartbar bleiben.</p><p>Oft zeigt sich erst mit der Zeit, ob eine Struktur tragfähig ist. Gerade deshalb lohnt es sich, hier etwas mehr Sorgfalt zu investieren.</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><h2 class="mb-6 font-serif text-3xl">NoSQL &amp; andere Ansätze</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Neben relationalen Datenbanken gibt es auch andere Ansätze, etwa dokumentenorientierte Systeme wie MongoDB. Diese setzen andere Schwerpunkte: mehr Flexibilität in der Struktur, andere Skalierungsmodelle und häufig ein stärkerer Bezug zu verteilten Anwendungen.</p><p>Solche Systeme sind nicht einfach „moderner“, sondern für andere Fragen gedacht. Im Alltag zeigt sich oft, dass relationale Modelle für viele klassische Anwendungen weiterhin sehr gut geeignet sind.</p></div></div></section><section class="mx-auto max-w-5xl px-6 py-16"><h2 class="mb-6 font-serif text-3xl">Werkzeuge</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Für die praktische Arbeit kommen je nach System und Aufgabenstellung unterschiedliche Werkzeuge zum Einsatz. Dazu gehören grafische Clients wie DBeaver, Oracle SQL Developer oder Toad, aber auch klassische Kommandozeilenwerkzeuge.</p><p>Entscheidend ist am Ende aber weniger das einzelne Tool als eine saubere Struktur und nachvollziehbare Arbeit mit den Daten selbst.</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><h2 class="mb-6 font-serif text-3xl">Notizen &amp; Einstiege</h2><ul class="space-y-3 text-textsub"><li>• SQL-Abfragen strukturieren und lesbar halten</li><li>• Indizes sinnvoll einsetzen</li><li>• Datenmodelle nachvollziehbar aufbauen</li><li>• Performance-Probleme erkennen und eingrenzen</li><li>• Unterschiede zwischen relationalen und dokumentenorientierten Modellen verstehen</li></ul><p class="mt-6"><a href="/de/notizen/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Weiter zu den Notizen</a></p></div></section></main>
 <footer class="border-t border-black/10 py-8">
   <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
     <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/en/index.html" class="hover:text-accent transition-colors">English</a></nav>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+      <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+      <a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+      <a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
+      <a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a>
+    </nav>
   </div>
 </footer>
-<script>
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.contains("hidden");
-    mobileMenu.classList.toggle("hidden");
-    menuToggle.setAttribute("aria-expanded", String(isHidden));
-  });
-}
-</script>
+
 </body>
 </html>

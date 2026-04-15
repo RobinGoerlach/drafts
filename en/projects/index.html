@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects – Robin Görlach</title>
-  <meta name="description" content="A selection of projects, ideas and technical work that have stayed with me over time." />
+  <meta name="description" content="A selection of projects, ideas and ongoing work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,87 +13,41 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            paper: "#F5F3EE",
-            section: "#E7E2D8",
-            textmain: "#2B2F33",
-            textsub: "#4E5B61",
-            accent: "#1F4E5F",
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            serif: ['"Source Serif 4"', "serif"],
-          },
-          boxShadow: {
-            soft: "0 6px 18px rgba(43,47,51,0.06)",
-          },
-        },
-      },
-    };
+          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
+          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
+        }
+      }
+    }
   </script>
 </head>
 <body class="bg-paper text-textmain font-sans">
+
 <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
   <div class="mx-auto max-w-6xl px-6">
     <div class="flex h-16 items-center justify-between">
       <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
-<a href="/en/projects/index.html" class="text-textmain">Projects</a>
-<a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
-<a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
-<a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
-<a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a>
-<a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
-      <div class="flex items-center gap-4">
-        <div class="hidden text-sm text-textsub sm:block">
-          <span class="text-textmain">EN</span>
-          <span class="mx-1 text-black/20">|</span>
-          <a href="/de/index.html" class="hover:text-accent transition-colors">DE</a>
-        </div>
-        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
-        </button>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a><a href="/en/projects/index.html" class="text-textmain">Projects</a><a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a><a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a><a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a><a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a><a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
+      <div class="hidden text-sm text-textsub sm:block">
+        <a href="/de/index.html" class="hover:text-accent transition-colors">DE</a>
+        <span class="mx-1 text-black/20">|</span>
+        <a href="/en/index.html" class="text-textmain">EN</a>
       </div>
-    </div>
-    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
-      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
-<a href="/en/projects/index.html" class="text-textmain">Projects</a>
-<a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
-<a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
-<a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
-<a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a>
-<a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
     </div>
   </div>
 </header>
-<main>
-<section class="mx-auto max-w-5xl px-6 py-14 md:py-20"><div class="max-w-3xl"><p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Overview</p><h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Projects</h1><div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg"><p>The projects on this page are not meant as a finished catalogue, but rather as an overview of things that have occupied me over time and, in many cases, still do.</p><p>Some are already implemented, others are still forming. What they share is that they come from practical questions rather than from the urge to build something for its own sake.</p></div></div></section>
-<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="grid gap-6">
-<div class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">SASD Website / CMS</h2><p class="leading-relaxed text-textsub">Building a website and content structure with a deliberately simple and understandable technical approach.</p></div>
-<div class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Logging Framework</h2><p class="leading-relaxed text-textsub">An own logging approach inspired by ideas such as log4j, with a focus on structure, flexibility and separation of concerns.</p></div>
-<div class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">REST Services</h2><p class="leading-relaxed text-textsub">Authentication, profile and project services built around clear responsibilities and a stable architecture.</p></div>
-<div class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Linux Test & Security Environment</h2><p class="leading-relaxed text-textsub">A Linux-based environment for trying out security concepts, configurations and administration processes in practice.</p></div>
-<div class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Node.js / React Work</h2><p class="leading-relaxed text-textsub">Smaller web projects that help connect modern frontend and backend approaches with more classical thinking.</p></div>
-<div class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Embedded / Electronics</h2><p class="leading-relaxed text-textsub">Experiments and smaller projects around microcontrollers, hardware and the practical side of measurement and control.</p></div>
-</div></div></section>
-</main>
-
+<main><section class="mx-auto max-w-5xl px-6 py-14 md:py-20"><div class="max-w-3xl"><p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Selection</p><h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Projects</h1><div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg"><p>The projects on this page are not a finished catalogue, but rather an overview of things that have occupied me over time or still do.</p><p>Some are already implemented, others are still in progress or at an earlier stage. What they have in common is that they grew out of practical questions rather than out of the idea of building something just for the sake of it.</p></div></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="grid gap-6"><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">SASD website / CMS</h2><p class="leading-relaxed text-textsub">Building a website with a deliberately simple and understandable technical approach. The focus is on clarity, maintainability and keeping content manageable without unnecessary dependencies.</p></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Logging framework</h2><p class="leading-relaxed text-textsub">Developing a logging approach inspired by ideas such as log4j while remaining flexible enough for different outputs and contexts.</p></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">REST services</h2><p class="leading-relaxed text-textsub">A set of services for authentication, profile management and project organisation, with an emphasis on structure and clear responsibilities.</p></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Linux test & security environment</h2><p class="leading-relaxed text-textsub">A practical environment for exploring system administration, configuration and security-related questions in a Linux setting.</p></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Node.js / React work</h2><p class="leading-relaxed text-textsub">Smaller full-stack projects that help connect modern web approaches with more classical software thinking.</p></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Embedded / electronics</h2><p class="leading-relaxed text-textsub">Experiments and smaller projects with microcontrollers and hardware, where software meets physical systems.</p></article></div></div></section></main>
 <footer class="border-t border-black/10 py-8">
   <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
     <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a><a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a><a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a><a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a><a href="/de/index.html" class="hover:text-accent transition-colors">Deutsch</a></nav>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+      <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+      <a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
+      <a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
+      <a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a>
+    </nav>
   </div>
 </footer>
-<script>
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.contains("hidden");
-    mobileMenu.classList.toggle("hidden");
-    menuToggle.setAttribute("aria-expanded", String(isHidden));
-  });
-}
-</script>
+
 </body>
 </html>

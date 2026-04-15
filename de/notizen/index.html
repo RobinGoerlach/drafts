@@ -13,96 +13,41 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            paper: "#F5F3EE",
-            section: "#E7E2D8",
-            textmain: "#2B2F33",
-            textsub: "#4E5B61",
-            accent: "#1F4E5F",
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            serif: ['"Source Serif 4"', "serif"],
-          },
-          boxShadow: {
-            soft: "0 6px 18px rgba(43,47,51,0.06)",
-          },
-        },
-      },
-    };
+          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
+          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
+        }
+      }
+    }
   </script>
 </head>
 <body class="bg-paper text-textmain font-sans">
+
 <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
   <div class="mx-auto max-w-6xl px-6">
     <div class="flex h-16 items-center justify-between">
       <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
-<a href="/de/notizen/index.html" class="text-textmain">Notizen</a>
-<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
-<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
-<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
-      <div class="flex items-center gap-4">
-        <div class="hidden text-sm text-textsub sm:block">
-          <span class="text-textmain">DE</span>
-          <span class="mx-1 text-black/20">|</span>
-          <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
-        </div>
-        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
-        </button>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a><a href="/de/notizen/index.html" class="text-textmain">Notizen</a><a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+      <div class="hidden text-sm text-textsub sm:block">
+        <a href="/de/index.html" class="text-textmain">DE</a>
+        <span class="mx-1 text-black/20">|</span>
+        <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
       </div>
-    </div>
-    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
-      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
-<a href="/de/notizen/index.html" class="text-textmain">Notizen</a>
-<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
-<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
-<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
     </div>
   </div>
 </header>
-<main>
-<section class="mx-auto max-w-5xl px-6 py-14 md:py-20">
-  <div class="max-w-3xl">
-    <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Sammlung</p>
-    <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Notizen</h1>
-    <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
-      <p>Nicht alles braucht einen eigenen Artikel oder eine saubere Struktur. Manche Dinge sind einfach zu klein, zu speziell oder zu situativ.</p>
-      <p>Diese Seite ist eine Sammlung solcher Notizen – Dinge, die sich im Alltag als nützlich erwiesen haben oder die man später schneller hier wiederfindet als über eine Suchmaschine. Der Nutzwert ist wichtiger als Vollständigkeit.</p>
-      <p>Mit der Zeit kann daraus mehr werden: kleine Dokumentationen, praktische Einstiege, Listen, Fundstücke oder Hinweise, die genau dann helfen, wenn man sie braucht.</p>
-    </div>
-  </div>
-</section>
-<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="grid gap-6 md:grid-cols-2">
-<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Linux & Administration</h2><p class="mb-4 leading-relaxed text-textsub">Kurze Hilfen zu typischen Alltagsfragen rund um Server, Dienste, Konfigurationen und Fehlerbilder.</p><ul class="space-y-3 text-textsub"><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">SSH-Key-Probleme beheben</a> – typische Ursachen und schnelle Lösungswege.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Apache-Konfiguration prüfen</a> – eine kleine Checkliste für Fehlersuche und Validierung.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Systemdienste nachvollziehbar dokumentieren</a> – weniger Rätselraten bei späteren Änderungen.</li></ul></article>
-<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Programmierung & Werkzeuge</h2><p class="mb-4 leading-relaxed text-textsub">Notizen zu Debugging, kleinen Stolpersteinen, Werkzeugen und Dingen, die man besser einmal sauber festhält.</p><ul class="space-y-3 text-textsub"><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">JavaScript-Debugging</a> – Werkzeuge, Denkwege und sinnvolle erste Schritte.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">PHP-Fehlerhandling</a> – strukturierter Umgang mit Fehlern statt verstreuter Sonderfälle.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Werkzeuge, die beim Refactoring helfen</a> – kleine Hilfen mit großem Effekt.</li></ul></article>
-<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Datenbanken & Datenmodelle</h2><p class="mb-4 leading-relaxed text-textsub">Praktische Notizen für Abfragen, Strukturen, Performance und das Wiedererkennen alter Denkfehler.</p><ul class="space-y-3 text-textsub"><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">MySQL-Performance prüfen</a> – erste Schritte zur Eingrenzung von Engpässen.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">SQL-Abfragen strukturieren</a> – lesbar und wartbar bleiben.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Datenmodelle ruhig aufbauen</a> – früh nachdenken spart später Umbauten.</li></ul></article>
-<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Elektronik, Praxis & Fundstücke</h2><p class="mb-4 leading-relaxed text-textsub">Kleine Hinweise, technische Beobachtungen und Dinge, die irgendwo zwischen Hardware, Alltag und Werkstatt liegen.</p><ul class="space-y-3 text-textsub"><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Arduino- oder ESP32-Idee festhalten</a> – bevor sie wieder im Kopf verschwindet.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Messwerte sinnvoll erfassen</a> – lieber früh über Struktur nachdenken.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Kleine Helfer, die sich bewährt haben</a> – nicht spektakulär, aber nützlich.</li></ul></article>
-</div></div></section>
-<section class="py-16"><div class="mx-auto max-w-4xl px-6"><div class="border-t border-black/10 pt-10"><h2 class="mb-4 font-serif text-3xl text-textmain">Und sonst</h2><p class="text-textsub leading-relaxed">Diese Sammlung wird sich mit der Zeit verändern. Manche Notizen werden später in eigene Themen überführt, andere bleiben genau hier, weil sie in dieser Form am nützlichsten sind.</p></div></div></section>
-</main>
-
+<main><section class="mx-auto max-w-5xl px-6 py-14 md:py-20"><div class="max-w-3xl"><p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Sammlung</p><h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Notizen</h1><div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg"><p>Nicht alles braucht einen eigenen Artikel oder eine saubere Struktur. Manche Dinge sind einfach zu klein, zu speziell oder zu situativ.</p><p>Diese Seite ist eine Sammlung solcher Notizen – Dinge, die sich im Alltag als nützlich erwiesen haben oder die man später schneller hier wiederfindet als über eine Suchmaschine.</p><p>Der Wert solcher Seiten liegt nicht darin, dass alles perfekt oder abgeschlossen wäre. Ihr Nutzen zeigt sich oft genau dann, wenn man eine bestimmte Kleinigkeit noch einmal nachsehen möchte und sie nicht wieder von vorn zusammensuchen muss.</p></div></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="grid gap-6 md:grid-cols-2"><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Linux &amp; Administration</h2><p class="mb-4 leading-relaxed text-textsub">Kleine Dinge aus dem Alltag: Kommandos, Prüfpfade, Fehlerquellen, Logdateien, SSH, Dienste, Konfiguration und die Frage, wie man Probleme systematisch statt hektisch eingrenzt.</p><ul class="space-y-3 text-textsub"><li><span class="font-medium text-textmain">SSH-Key-Probleme beheben</span> – typische Ursachen, vom falschen Rechtekonzept bis zu missverständlichen Fehlermeldungen.</li><li><span class="font-medium text-textmain">Apache-Konfiguration prüfen</span> – kleine Checkliste für Module, Virtual Hosts, Logs und offensichtliche Stolperstellen.</li><li><span class="font-medium text-textmain">Logs lesen</span> – lieber Hinweise sauber sammeln als nur einzelne Fehlermeldungen zu jagen.</li></ul></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Programmierung &amp; Werkzeuge</h2><p class="mb-4 leading-relaxed text-textsub">Notizen zu Debugging, Refactoring, Fehlersuche, kleinen Hilfswerkzeugen und Arbeitsweisen, die sich über längere Zeit als brauchbar erwiesen haben.</p><ul class="space-y-3 text-textsub"><li><span class="font-medium text-textmain">JavaScript-Debugging</span> – Werkzeuge, Breakpoints und die Kunst, nicht nur Symptome zu betrachten.</li><li><span class="font-medium text-textmain">PHP-Fehlerhandling</span> – strukturierter Umgang mit Fehlern, Logs und Rückgaben.</li><li><span class="font-medium text-textmain">Refactoring mit Maß</span> – verbessern, ohne alles unnötig neu zu schreiben.</li></ul></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Datenbanken &amp; Datenmodelle</h2><p class="mb-4 leading-relaxed text-textsub">SQL, Datenmodelle, Indizes, Auswertungen und kleine Dinge, die zwischen einer funktionierenden und einer auf Dauer brauchbaren Lösung unterscheiden.</p><ul class="space-y-3 text-textsub"><li><span class="font-medium text-textmain">MySQL-Performance prüfen</span> – erste Schritte bei langsamen Abfragen und typischen Ursachen.</li><li><span class="font-medium text-textmain">SQL-Abfragen strukturieren</span> – lesbar, wartbar und trotzdem präzise bleiben.</li><li><span class="font-medium text-textmain">Modelle sauber halten</span> – wie Beziehungen später noch verständlich bleiben.</li></ul></article><article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Elektronik, Praxis &amp; Fundstücke</h2><p class="mb-4 leading-relaxed text-textsub">Nicht alles davon ist rein technisch im engeren Sinn. Manche Notizen beginnen mit einer praktischen Frage, einer Idee oder einem kleinen Fundstück und finden erst später ihren Platz.</p><ul class="space-y-3 text-textsub"><li><span class="font-medium text-textmain">Kleine Helfer</span> – Dinge, die in Projekten oder im Alltag immer wieder nützlich sind.</li><li><span class="font-medium text-textmain">Messwerte und Praxis</span> – einfache technische Zusammenhänge verständlich festhalten.</li><li><span class="font-medium text-textmain">Gedanken zu Struktur</span> – was sich bewährt hat und was eher nicht.</li></ul></article></div></div></section><section class="py-16"><div class="mx-auto max-w-4xl px-6"><div class="border-t border-black/10 pt-10"><h2 class="mb-4 font-serif text-3xl text-textmain">Und sonst</h2><p class="text-textsub leading-relaxed">Diese Sammlung wird sich mit der Zeit verändern. Manche Notizen werden später in eigene Themen überführt, andere bleiben genau hier, weil sie in dieser Form am nützlichsten sind.</p></div></div></section></main>
 <footer class="border-t border-black/10 py-8">
   <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
     <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/en/index.html" class="hover:text-accent transition-colors">English</a></nav>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+      <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+      <a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+      <a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
+      <a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a>
+    </nav>
   </div>
 </footer>
-<script>
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.contains("hidden");
-    mobileMenu.classList.toggle("hidden");
-    menuToggle.setAttribute("aria-expanded", String(isHidden));
-  });
-}
-</script>
+
 </body>
 </html>

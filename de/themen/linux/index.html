@@ -10,58 +10,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {theme:{extend:{colors:{paper:'#F5F3EE',section:'#E7E2D8',textmain:'#2B2F33',textsub:'#4E5B61',accent:'#1F4E5F'},fontFamily:{sans:['Inter','sans-serif'],serif:['"Source Serif 4"','serif']}}}};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
+          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
+        }
+      }
+    }
   </script>
 </head>
 <body class="bg-paper text-textmain font-sans">
-  <main>
-    <section class="mx-auto max-w-5xl px-6 py-16">
-      <h1 class="mb-6 font-serif text-4xl">Linux &amp; Administration</h1>
-      <div class="space-y-4 leading-relaxed text-textsub">
-        <p>Linux begleitet viele technische Themen über lange Zeit. Es ist Arbeitsumgebung, Serverplattform, Werkzeugkasten und oft auch der Ort, an dem sich zeigt, wie gut Systeme wirklich verstanden wurden.</p>
-        <p>Auf dieser Seite geht es deshalb nicht nur um Distributionen oder einzelne Kommandos, sondern um Administration, Struktur, Sicherheit, Werkzeuge und den praktischen Umgang mit Systemen, die im Alltag zuverlässig funktionieren sollen.</p>
+
+<header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="flex h-16 items-center justify-between">
+      <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a><a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a><a href="/de/themen/index.html" class="text-textmain">Themen</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+      <div class="hidden text-sm text-textsub sm:block">
+        <a href="/de/index.html" class="text-textmain">DE</a>
+        <span class="mx-1 text-black/20">|</span>
+        <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
       </div>
-    </section>
-    <section class="bg-section py-16">
-      <div class="mx-auto max-w-5xl space-y-12 px-6">
-        <div>
-          <h2 class="mb-3 font-serif text-2xl">Systeme im Alltag</h2>
-          <p class="leading-relaxed text-textsub">Im Alltag geht es bei Linux oft weniger um große Konzepte als um saubere Konfiguration, nachvollziehbare Abläufe und die Fähigkeit, Fehler einzugrenzen. Gerade dadurch wird sichtbar, ob ein System über längere Zeit tragfähig ist.</p>
-        </div>
-        <div>
-          <h2 class="mb-3 font-serif text-2xl">Administration</h2>
-          <p class="leading-relaxed text-textsub">Administration bedeutet nicht nur Benutzer anlegen, Pakete installieren oder Dienste starten. Wichtig sind ebenso Protokolle, Konfigurationen, Wiederholbarkeit, Updates, Backups und die Frage, wie ein System auch später noch verständlich bleibt.</p>
-        </div>
-        <div>
-          <h2 class="mb-3 font-serif text-2xl">Server &amp; Infrastruktur</h2>
-          <p class="leading-relaxed text-textsub">Ob Webserver, Datenbankserver, Testumgebung oder Virtualisierung: Linux bildet häufig die Grundlage für Systeme, die nicht nur laufen, sondern betreibbar bleiben müssen. Dabei spielen Werkzeuge wie Apache, Datenbanken, Proxmox oder einfache Shell-Skripte oft besser zusammen, als es auf den ersten Blick wirkt.</p>
-        </div>
-      </div>
-    </section>
-    <section class="mx-auto max-w-5xl px-6 py-16">
-      <h2 class="mb-6 font-serif text-3xl">Sicherheit</h2>
-      <div class="space-y-4 leading-relaxed text-textsub">
-        <p>Sicherheit ist kein Zusatz, den man später auf ein System legt. Viele Dinge entscheiden sich schon bei der Einrichtung: Benutzerrechte, Paketquellen, Protokollierung, Angriffsfläche, Updates, Netzkonfiguration und die Frage, welche Dienste überhaupt nach außen sichtbar sein müssen.</p>
-        <p>Dazu kommen Werkzeuge und Verfahren, die helfen, ein System besser zu verstehen und Abweichungen sichtbar zu machen. Audit- und Monitoring-Werkzeuge, Logdateien oder Härtungsmaßnahmen sind dabei nicht Selbstzweck, sondern Teil einer sauberen Betriebsweise.</p>
-        <p>Gerade in kleineren Umgebungen ist Pragmatismus wichtig: nicht jede Theorie lässt sich vollständig umsetzen, aber vieles lässt sich deutlich besser machen, wenn man mit etwas Ruhe und Übersicht an die Sache herangeht.</p>
-      </div>
-    </section>
-    <section class="bg-section py-16">
-      <div class="mx-auto max-w-5xl px-6">
-        <h2 class="mb-6 font-serif text-3xl">Werkzeuge</h2>
-        <div class="space-y-4 leading-relaxed text-textsub">
-          <p>Für die praktische Arbeit gehören verschiedene Werkzeuge selbstverständlich dazu: Shell, SSH, systemd-Werkzeuge, Paketverwaltung, Logdateien, Editoren, Skripte, Monitoring und einfache Prüfwerkzeuge.</p>
-          <p>Dazu kommen je nach Aufgabe Werkzeuge wie Apache, Tomcat, Datenbanken, Proxmox oder Sicherheitswerkzeuge wie Lynis, Wazuh oder auditd. Entscheidend ist dabei weniger das einzelne Produkt als die Fähigkeit, Zusammenhänge zu erkennen und Systeme in ihrem Gesamtbild zu verstehen.</p>
-        </div>
-      </div>
-    </section>
-    <section class="mx-auto max-w-5xl px-6 py-16">
-      <h2 class="mb-6 font-serif text-3xl">Automatisierung &amp; Wiederholbarkeit</h2>
-      <div class="space-y-4 leading-relaxed text-textsub">
-        <p>Viele Aufgaben in Linux-Umgebungen kehren wieder. Gerade deshalb lohnt es sich, nicht alles immer wieder von Hand zu tun. Skripte, klare Checklisten und später auch Werkzeuge wie Ansible helfen dabei, Systeme konsistent aufzubauen und Fehler zu vermeiden.</p>
-        <p>Wiederholbarkeit ist nicht nur bequem, sondern auch eine Form von Qualität. Dinge, die sich nachvollziehbar und reproduzierbar einrichten lassen, bleiben meist auch besser wartbar.</p>
-      </div>
-    </section>
-  </main>
+    </div>
+  </div>
+</header>
+<main><section class="mx-auto max-w-5xl px-6 py-16"><h1 class="mb-6 font-serif text-4xl">Linux &amp; Administration</h1><div class="space-y-4 leading-relaxed text-textsub"><p>Linux begleitet viele technische Themen über lange Zeit. Es ist Arbeitsumgebung, Serverplattform, Werkzeugkasten und oft auch der Ort, an dem sich zeigt, wie gut Systeme wirklich verstanden wurden.</p><p>Auf dieser Seite geht es deshalb nicht nur um Distributionen oder einzelne Kommandos, sondern um Administration, Struktur, Sicherheit, Werkzeuge und den praktischen Umgang mit Systemen, die im Alltag zuverlässig funktionieren sollen.</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl space-y-12 px-6"><div><h2 class="mb-3 font-serif text-2xl">Systeme im Alltag</h2><p class="leading-relaxed text-textsub">Im Alltag geht es bei Linux oft weniger um große Konzepte als um saubere Konfiguration, nachvollziehbare Abläufe und die Fähigkeit, Fehler einzugrenzen. Gerade dadurch wird sichtbar, ob ein System über längere Zeit tragfähig ist.</p></div><div><h2 class="mb-3 font-serif text-2xl">Administration</h2><p class="leading-relaxed text-textsub">Administration bedeutet für mich nicht nur Benutzer anlegen, Pakete installieren oder Dienste starten. Wichtig sind ebenso Protokolle, Konfigurationen, Wiederholbarkeit, Updates, Backups und die Frage, wie ein System auch später noch verständlich bleibt.</p></div><div><h2 class="mb-3 font-serif text-2xl">Server &amp; Infrastruktur</h2><p class="leading-relaxed text-textsub">Ob Webserver, Datenbankserver, Testumgebung oder Virtualisierung: Linux bildet häufig die Grundlage für Systeme, die nicht nur laufen, sondern betreibbar bleiben müssen.</p></div></div></section><section class="mx-auto max-w-5xl px-6 py-16"><h2 class="mb-6 font-serif text-3xl">Sicherheit</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Sicherheit ist kein Zusatz, den man später auf ein System legt. Viele Dinge entscheiden sich schon bei der Einrichtung: Benutzerrechte, Paketquellen, Protokollierung, Angriffsfläche, Updates, Netzkonfiguration und die Frage, welche Dienste überhaupt nach außen sichtbar sein müssen.</p><p>Dazu kommen Werkzeuge und Verfahren, die helfen, ein System besser zu verstehen und Abweichungen sichtbar zu machen. Audit- und Monitoring-Werkzeuge, Logdateien oder Härtungsmaßnahmen sind dabei nicht Selbstzweck, sondern Teil einer sauberen Betriebsweise.</p><p>Gerade in kleineren Umgebungen ist Pragmatismus wichtig: nicht jede Theorie lässt sich vollständig umsetzen, aber vieles lässt sich deutlich besser machen, wenn man mit etwas Ruhe und Übersicht an die Sache herangeht.</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><h2 class="mb-6 font-serif text-3xl">Werkzeuge</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Für die praktische Arbeit gehören verschiedene Werkzeuge selbstverständlich dazu: Shell, SSH, systemd-Werkzeuge, Paketverwaltung, Logdateien, Editoren, Skripte, Monitoring und einfache Prüfwerkzeuge.</p><p>Dazu kommen je nach Aufgabe Werkzeuge wie Apache, Tomcat, Datenbanken, Proxmox oder Sicherheitswerkzeuge wie Lynis, Wazuh oder auditd.</p></div></div></section><section class="mx-auto max-w-5xl px-6 py-16"><h2 class="mb-6 font-serif text-3xl">Automatisierung &amp; Wiederholbarkeit</h2><div class="space-y-4 leading-relaxed text-textsub"><p>Viele Aufgaben in Linux-Umgebungen kehren wieder. Gerade deshalb lohnt es sich, nicht alles immer wieder von Hand zu tun. Skripte, klare Checklisten und später auch Werkzeuge wie Ansible helfen dabei, Systeme konsistent aufzubauen und Fehler zu vermeiden.</p><p>Wiederholbarkeit ist nicht nur bequem, sondern auch eine Form von Qualität.</p></div></section><section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><h2 class="mb-6 font-serif text-3xl">Notizen &amp; Einstiege</h2><ul class="space-y-3 text-textsub"><li>• Benutzer, Rechte und Gruppen sinnvoll organisieren</li><li>• Dienste prüfen und Fehlerquellen systematisch eingrenzen</li><li>• Logs lesen, statt nur Fehlermeldungen zu raten</li><li>• Härtung pragmatisch umsetzen</li><li>• Skripte und Checklisten für wiederkehrende Aufgaben nutzen</li></ul><p class="mt-6"><a href="/de/notizen/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Weiter zu den Notizen</a></p></div></section></main>
+<footer class="border-t border-black/10 py-8">
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+    <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+      <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+      <a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+      <a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
+      <a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a>
+    </nav>
+  </div>
+</footer>
+
 </body>
 </html>
