@@ -1,11 +1,322 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placeholder</title>
+
+  <title>Notes – Robin Görlach</title>
+  <meta
+    name="description"
+    content="Notes, small technical references and useful fragments that are meant to be practical rather than polished."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+          boxShadow: {
+            soft: "0 6px 18px rgba(43, 47, 51, 0.06)",
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <p>Placeholder page.</p>
+
+<body class="bg-paper text-textmain font-sans">
+  <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">
+          Robin Görlach
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-textsub md:flex">
+          <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+          <a href="/en/projects/" class="hover:text-accent transition-colors">Projects</a>
+          <a href="/en/notes/" class="text-textmain">Notes</a>
+          <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+          <a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
+          <a href="/en/about/" class="hover:text-accent transition-colors">About</a>
+          <a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="hidden text-sm text-textsub sm:block">
+            <a href="/de/notizen/" class="hover:text-accent transition-colors">DE</a>
+            <span class="mx-1 text-black/20">|</span>
+            <a href="/en/notes/" class="text-textmain">EN</a>
+          </div>
+
+          <button
+            id="menu-toggle"
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm text-textsub">
+          <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+          <a href="/en/projects/" class="hover:text-accent transition-colors">Projects</a>
+          <a href="/en/notes/" class="text-textmain">Notes</a>
+          <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+          <a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
+          <a href="/en/about/" class="hover:text-accent transition-colors">About</a>
+          <a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a>
+          <div class="pt-2 text-textsub">
+            <a href="/de/notizen/" class="hover:text-accent transition-colors">DE</a>
+            <span class="mx-1 text-black/20">|</span>
+            <a href="/en/notes/" class="text-textmain">EN</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-5xl px-6 py-14 md:py-20">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">
+          Collection
+        </p>
+
+        <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">
+          Notes
+        </h1>
+
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
+          <p>
+            Not everything needs to become a full article or a carefully structured page.
+            Some things are too small for that, too specific, or simply too useful to leave
+            unwritten until later.
+          </p>
+
+          <p>
+            This page is meant for exactly those things: notes, small references, practical
+            observations, fragments and reminders that tend to be useful again at some point.
+            Some are mainly here for my own future self, others may be helpful to visitors as well.
+          </p>
+
+          <p>
+            Usefulness matters more than polish here. The goal is not completeness, but having
+            things in one place so they can be found quickly when needed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="mb-10 max-w-3xl">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">Areas</h2>
+          <p class="text-textsub leading-relaxed">
+            The notes are not meant to be a rigid archive. They are closer to a working bench:
+            some entries are already fairly concrete, others begin as brief reminders,
+            half-shaped ideas or a few useful references.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <h3 class="mb-3 font-serif text-2xl text-textmain">Linux &amp; Administration</h3>
+            <p class="mb-4 leading-relaxed text-textsub">
+              Practical notes on systems, configuration, troubleshooting and day-to-day operations.
+              Linux, Apache, services and small infrastructure work all tend to benefit from
+              having recurring patterns written down once.
+            </p>
+            <ul class="space-y-3 text-textsub">
+              <li>
+                <a href="/en/topics/linux/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Narrowing down SSH key problems
+                </a>
+                – common failure patterns, file permissions and the places that are usually worth checking first.
+              </li>
+              <li>
+                <a href="/en/topics/linux/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Checking Apache configuration without guessing
+                </a>
+                – a small mental checklist for vhosts, paths, permissions and where the actual problem often sits.
+              </li>
+              <li>
+                <a href="/en/topics/linux/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Services, logs and sequence of investigation
+                </a>
+                – notes on how to avoid touching everything at once when something breaks.
+              </li>
+            </ul>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <h3 class="mb-3 font-serif text-2xl text-textmain">Programming &amp; Tools</h3>
+            <p class="mb-4 leading-relaxed text-textsub">
+              Development-related notes that may be too small for their own page, but are often
+              exactly the kind of things one wants to look up later.
+            </p>
+            <ul class="space-y-3 text-textsub">
+              <li>
+                <a href="/en/topics/programming/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Everyday JavaScript debugging
+                </a>
+                – where to start when code runs but behaves differently from what was intended.
+              </li>
+              <li>
+                <a href="/en/topics/programming/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Building PHP error handling pragmatically
+                </a>
+                – when logging is enough, when exceptions help, and how to keep structure without overdoing it.
+              </li>
+              <li>
+                <a href="/en/topics/programming/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Small helpers for day-to-day coding
+                </a>
+                – tools, editor habits and patterns that age better than one-off tricks.
+              </li>
+            </ul>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <h3 class="mb-3 font-serif text-2xl text-textmain">Databases &amp; Data Models</h3>
+            <p class="mb-4 leading-relaxed text-textsub">
+              Notes on SQL, structure, readability and the kinds of questions that often become
+              interesting only after a data model has been in use for a while.
+            </p>
+            <ul class="space-y-3 text-textsub">
+              <li>
+                <a href="/en/topics/databases/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Getting a first feel for MySQL performance
+                </a>
+                – not magic, just sensible first steps: indexes, queries, order of analysis and whether MySQL is actually the problem.
+              </li>
+              <li>
+                <a href="/en/topics/databases/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Writing SQL you can still read later
+                </a>
+                – ways of structuring queries so they remain maintainable instead of turning into a puzzle.
+              </li>
+              <li>
+                <a href="/en/topics/databases/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Thinking about data models with later analysis in mind
+                </a>
+                – reminders of why clean structure nearly always pays off.
+              </li>
+            </ul>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <h3 class="mb-3 font-serif text-2xl text-textmain">Electronics, Practice &amp; Useful Fragments</h3>
+            <p class="mb-4 leading-relaxed text-textsub">
+              Not everything here is pure software. Some notes come from hardware, microcontrollers,
+              measurement and practical questions that do not fit neatly into a single technical drawer.
+            </p>
+            <ul class="space-y-3 text-textsub">
+              <li>
+                <a href="/en/topics/electronics/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Arduino and ESP32 as practical learning and working environments
+                </a>
+                – where they are easy to start with, where their limits appear, and why small real projects often teach more than abstract theory.
+              </li>
+              <li>
+                <a href="/en/link-collection.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Tools and references worth not having to search for again
+                </a>
+                – links, fragments and resources that are not spectacular, but consistently useful.
+              </li>
+              <li>
+                <a href="/en/topics/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
+                  Open questions and half-finished thoughts
+                </a>
+                – some things deliberately remain unfinished until they have had time to grow into something clearer.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-4xl px-6">
+        <div class="border-t border-black/10 pt-10">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">How to read this page</h2>
+          <div class="space-y-4 text-textsub leading-relaxed">
+            <p>
+              The notes are intentionally looser than the rest of the site. The point here is less
+              presentation than retrievability, usefulness and not having to rediscover the same things again and again.
+            </p>
+            <p>
+              Some entries will probably grow into fuller topic pages later. Others will stay right here,
+              because this form is exactly what makes them useful: short enough to scan quickly,
+              but detailed enough to be more than a single keyword.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-4xl px-6">
+        <div class="max-w-3xl">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">And otherwise</h2>
+          <p class="text-textsub leading-relaxed">
+            This collection will change over time. Some notes will be expanded, some merged,
+            others may disappear again. What matters most is not completeness, but whether something
+            turns out to be useful in practice.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10 py-8">
+    <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+      <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+      <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+        <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+        <a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
+        <a href="/de/notizen/" class="hover:text-accent transition-colors">Deutsch</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute("aria-expanded", String(isHidden));
+      });
+    }
+  </script>
 </body>
 </html>
