@@ -1,0 +1,22 @@
+/* Tooltip Styles */
+.tooltip {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%; /* Positioniert den Tooltip oberhalb des Icons */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333; /* Dunkler Hintergrund für den Tooltip */
+  color: #fff; /* Weißer Text */
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  margin-bottom: 8px; /* Abstand zum Icon */
+}
+
+.group:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
