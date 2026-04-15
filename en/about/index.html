@@ -1,11 +1,257 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placeholder</title>
+
+  <title>About – Robin Görlach</title>
+  <meta
+    name="description"
+    content="A few words about Robin Görlach and a long-standing interest in technology, systems and practical questions."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <p>Placeholder page.</p>
+
+<body class="bg-paper text-textmain font-sans">
+  <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">
+          Robin Görlach
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-textsub md:flex">
+          <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+          <a href="/en/projects/" class="hover:text-accent transition-colors">Projects</a>
+          <a href="/en/notes/" class="hover:text-accent transition-colors">Notes</a>
+          <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+          <a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
+          <a href="/en/about/" class="text-textmain">About</a>
+          <a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="hidden text-sm text-textsub sm:block">
+            <a href="/de/ueber/" class="hover:text-accent transition-colors">DE</a>
+            <span class="mx-1 text-black/20">|</span>
+            <a href="/en/about/" class="text-textmain">EN</a>
+          </div>
+
+          <button
+            id="menu-toggle"
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm text-textsub">
+          <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+          <a href="/en/projects/" class="hover:text-accent transition-colors">Projects</a>
+          <a href="/en/notes/" class="hover:text-accent transition-colors">Notes</a>
+          <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+          <a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
+          <a href="/en/about/" class="text-textmain">About</a>
+          <a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a>
+          <div class="pt-2 text-textsub">
+            <a href="/de/ueber/" class="hover:text-accent transition-colors">DE</a>
+            <span class="mx-1 text-black/20">|</span>
+            <a href="/en/about/" class="text-textmain">EN</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-5xl px-6 py-14 md:py-20">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">
+          About
+        </p>
+
+        <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">
+          A few words about me
+        </h1>
+
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
+          <p>
+            I have been working with technology, systems and programming for a long time.
+            Some of it comes from professional work, some from curiosity, and some simply
+            from the need to understand how things actually work.
+          </p>
+
+          <p>
+            This site is a place for projects, notes, topics and things I tend to come back to.
+            Much of it has grown over time — some of it casually, some of it with more focus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="max-w-3xl">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">How it started</h2>
+
+          <div class="space-y-4 text-textsub leading-relaxed">
+            <p>
+              It didn’t start with modern systems, but with a programmable calculator and
+              the simple idea of making repetitive work easier. From there it moved through
+              early personal computers, expansion cards, CP/M, Turbo Pascal and various
+              mathematical and technical tools.
+            </p>
+
+            <p>
+              Later came databases, modems, Unix systems, Linux, web servers, programming
+              languages and many different tools. Some stayed, others were just steps along
+              the way. Together they shaped a perspective that isn’t tied to a single stack
+              or a single moment in time.
+            </p>
+
+            <p>
+              Maybe that’s part of what still makes it interesting: technology changes,
+              but many of the underlying questions remain.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="max-w-3xl">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">How I approach things</h2>
+
+          <div class="space-y-4 text-textsub leading-relaxed">
+            <p>
+              I tend to prefer solutions that remain understandable. Not everything needs
+              to be complex just because it sounds technical. On the other hand, quick
+              shortcuts often create problems later on.
+            </p>
+
+            <p>
+              I value clarity, structure and tools that are actually useful in the long run.
+              That doesn’t mean everything has to be over-engineered — but a bit of calm,
+              a bit of structure and some reflection often save more time than rushing does.
+            </p>
+
+            <p>
+              It probably shows that technology has been part of everyday life for quite a while.
+              Not as something special, but simply as something that has grown over time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="max-w-3xl">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">What else has found a place here</h2>
+
+          <div class="space-y-4 text-textsub leading-relaxed">
+            <p>
+              Not everything on this site revolves around IT. Over time, other topics found
+              their place here as well: electronics, data, gardening, plants, cooking,
+              travel and a few things besides.
+            </p>
+
+            <p>
+              That mix is not accidental. It is simply part of how interests grow over time,
+              and how technical questions often connect with everyday life more than one might expect.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="max-w-3xl border-t border-black/10 pt-10">
+          <h2 class="mb-4 font-serif text-3xl text-textmain">
+            If you’re looking for something more concrete
+          </h2>
+
+          <div class="space-y-4 text-textsub leading-relaxed">
+            <p>
+              If you prefer to look at actual work and ideas, you’ll find a selection on the
+              projects page. That is where the focus shifts from background and context to
+              things that were built, explored or sketched out more directly.
+            </p>
+
+            <p>
+              <a
+                href="/en/projects/"
+                class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent"
+              >
+                Go to projects.
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10 py-8">
+    <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+      <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+      <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+        <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="/en/projects/" class="hover:text-accent transition-colors">Projects</a>
+        <a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a>
+        <a href="/de/ueber/" class="hover:text-accent transition-colors">Deutsch</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute("aria-expanded", String(isHidden));
+      });
+    }
+  </script>
 </body>
 </html>
