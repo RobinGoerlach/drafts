@@ -3,51 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data analysis – Robin Görlach</title>
-  <meta name="description" content="Questions of analysis, structure and meaningful work with data can be collected here over time." />
+
+  <title>Data Analysis & Statistics – Robin Görlach</title>
+  <meta
+    name="description"
+    content="Notes and reflections on data analysis, statistics, interpretation and the practical use of data."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
-          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
-          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
-        }
-      }
-    }
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+        },
+      },
+    };
   </script>
 </head>
+
 <body class="bg-paper text-textmain font-sans">
+  <main>
+    <section class="mx-auto max-w-5xl px-6 py-16">
+      <h1 class="mb-6 font-serif text-4xl">Data Analysis &amp; Statistics</h1>
 
-<header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
-  <div class="mx-auto max-w-6xl px-6">
-    <div class="flex h-16 items-center justify-between">
-      <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a><a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a><a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a><a href="/en/topics/index.html" class="text-textmain">Topics</a><a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a><a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a><a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
-      <div class="hidden text-sm text-textsub sm:block">
-        <a href="/de/index.html" class="hover:text-accent transition-colors">DE</a>
-        <span class="mx-1 text-black/20">|</span>
-        <a href="/en/index.html" class="text-textmain">EN</a>
+      <div class="space-y-4 leading-relaxed text-textsub">
+        <p>
+          Data rarely speaks for itself. It only becomes useful through structure,
+          comparison, interpretation and context. That is where data analysis and
+          statistics become interesting to me.
+        </p>
+
+        <p>
+          This page is therefore not just about methods, but also about how data is
+          gathered, cleaned and understood in the first place. Bad data does not
+          improve just because it is analysed more elaborately.
+        </p>
       </div>
-    </div>
-  </div>
-</header>
-<main><section class="mx-auto max-w-5xl px-6 py-16"><h1 class="mb-6 font-serif text-4xl">Data analysis</h1><div class="space-y-4 leading-relaxed text-textsub"><p>Questions of analysis, structure and meaningful work with data can be collected here over time.</p><p>This subpage is intended as a starting point and can be expanded further later on.</p></div></section></main>
-<footer class="border-t border-black/10 py-8">
-  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
-    <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
-      <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
-      <a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
-      <a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
-      <a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a>
-    </nav>
-  </div>
-</footer>
+    </section>
 
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl space-y-12 px-6">
+        <div>
+          <h2 class="mb-3 font-serif text-2xl">From raw values to useful conclusions</h2>
+          <p class="leading-relaxed text-textsub">
+            Between a measured value and a meaningful conclusion lie several steps:
+            collection, cleaning, structure, feature selection and an evaluation
+            that does not distort the context.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-3 font-serif text-2xl">Statistics as a tool</h2>
+          <p class="leading-relaxed text-textsub">
+            To me, statistics is less a world of formulas than a practical tool for
+            understanding uncertainty, distributions, frequencies and relationships.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-3 font-serif text-2xl">Structure before visualisation</h2>
+          <p class="leading-relaxed text-textsub">
+            Charts and dashboards can be useful, but they do not replace a sound
+            data foundation. Categories, periods and relationships need to be clear
+            before visualisation becomes meaningful.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-6 py-16">
+      <h2 class="mb-6 font-serif text-3xl">Practical fields</h2>
+
+      <div class="space-y-4 leading-relaxed text-textsub">
+        <p>
+          Data analysis matters in many contexts: technical measurements, databases,
+          logs, monitoring, economic questions and anywhere larger sets of data are
+          expected to reveal patterns, deviations or developments.
+        </p>
+
+        <p>
+          The result is only part of the story. It matters just as much how reliable
+          the path towards that result really was.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <h2 class="mb-6 font-serif text-3xl">Tools &amp; mindset</h2>
+
+        <div class="space-y-4 leading-relaxed text-textsub">
+          <p>
+            Practical work may involve spreadsheets, databases, SQL queries, small
+            programs or more specialised tools. Depending on the question, that can
+            also include tools such as <span class="text-textmain">R with RStudio</span>
+            or <span class="text-textmain">KNIME</span>, especially when data needs to
+            be cleaned, explored and turned into more traceable analyses.
+          </p>
+
+          <p>
+            What matters most, however, is not the tool itself but the ability to
+            organise data clearly, build understandable analyses and assess results critically.
+          </p>
+
+          <p>
+            In analysis, it often helps to ask the question properly before rushing
+            towards a chart or a metric.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

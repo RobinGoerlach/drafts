@@ -3,51 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenanalyse – Robin Görlach</title>
-  <meta name="description" content="Hier geht es um Auswertungen, Strukturen, numerische Fragen und den sinnvollen Umgang mit Daten." />
+
+  <title>Datenanalyse & Statistik – Robin Görlach</title>
+  <meta
+    name="description"
+    content="Gedanken, Notizen und praktische Überlegungen zu Datenanalyse, Statistik, Auswertung und der sinnvollen Nutzung von Daten."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
-          fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Source Serif 4', 'serif'] },
-          boxShadow: { soft: '0 6px 18px rgba(43,47,51,0.06)' }
-        }
-      }
-    }
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+        },
+      },
+    };
   </script>
 </head>
+
 <body class="bg-paper text-textmain font-sans">
+  <main>
+    <section class="mx-auto max-w-5xl px-6 py-16">
+      <h1 class="mb-6 font-serif text-4xl">Datenanalyse &amp; Statistik</h1>
 
-<header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
-  <div class="mx-auto max-w-6xl px-6">
-    <div class="flex h-16 items-center justify-between">
-      <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a><a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a><a href="/de/themen/index.html" class="text-textmain">Themen</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
-      <div class="hidden text-sm text-textsub sm:block">
-        <a href="/de/index.html" class="text-textmain">DE</a>
-        <span class="mx-1 text-black/20">|</span>
-        <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
+      <div class="space-y-4 leading-relaxed text-textsub">
+        <p>
+          Daten sind selten von sich aus aussagekräftig. Erst durch Struktur,
+          Auswahl, Vergleich und Einordnung entsteht etwas, das über bloße Zahlen
+          hinausgeht. Genau dort beginnt für mich der interessante Teil von
+          Datenanalyse und Statistik.
+        </p>
+
+        <p>
+          Auf dieser Seite geht es deshalb nicht nur um Methoden, sondern auch um
+          die Frage, wie Daten überhaupt sinnvoll erhoben, aufbereitet und gelesen
+          werden können. Denn schlechte Daten werden nicht dadurch besser, dass man
+          sie aufwendiger auswertet.
+        </p>
       </div>
-    </div>
-  </div>
-</header>
-<main><section class="mx-auto max-w-5xl px-6 py-16"><h1 class="mb-6 font-serif text-4xl">Datenanalyse</h1><div class="space-y-4 leading-relaxed text-textsub"><p>Hier geht es um Auswertungen, Strukturen, numerische Fragen und den sinnvollen Umgang mit Daten.</p><p>Diese Unterseite ist als Einstieg angelegt und kann später weiter ausgebaut werden.</p></div></section></main>
-<footer class="border-t border-black/10 py-8">
-  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
-    <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-    <nav class="flex flex-wrap gap-4 text-sm text-textsub">
-      <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-      <a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
-      <a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
-      <a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a>
-    </nav>
-  </div>
-</footer>
+    </section>
 
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl space-y-12 px-6">
+        <div>
+          <h2 class="mb-3 font-serif text-2xl">Vom Rohwert zur Aussage</h2>
+          <p class="leading-relaxed text-textsub">
+            Zwischen einem Messwert und einer brauchbaren Aussage liegen mehrere
+            Schritte: Erfassung, Bereinigung, Struktur, Auswahl geeigneter Merkmale
+            und eine Auswertung, die den Zusammenhang nicht verfälscht.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-3 font-serif text-2xl">Statistik als Werkzeug</h2>
+          <p class="leading-relaxed text-textsub">
+            Statistik ist für mich weniger ein Selbstzweck als ein Werkzeug, um
+            Unsicherheit, Häufigkeiten, Verteilungen und Zusammenhänge besser zu
+            verstehen. Gerade dort, wo Daten aus der Praxis kommen, hilft eine
+            saubere statistische Sicht oft mehr als vorschnelle Schlüsse.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-3 font-serif text-2xl">Struktur vor Visualisierung</h2>
+          <p class="leading-relaxed text-textsub">
+            Diagramme und Dashboards können nützlich sein, aber sie ersetzen keine
+            gute Datenbasis. Bevor etwas visualisiert wird, müssen Begriffe,
+            Zeiträume, Kategorien und Zusammenhänge klar genug sein, um überhaupt
+            sinnvoll ausgewertet werden zu können.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-6 py-16">
+      <h2 class="mb-6 font-serif text-3xl">Praktische Felder</h2>
+
+      <div class="space-y-4 leading-relaxed text-textsub">
+        <p>
+          Datenanalyse spielt in sehr unterschiedlichen Zusammenhängen eine Rolle:
+          bei technischen Messwerten, bei Datenbanken, bei Logdateien, im Umfeld
+          von Monitoring, bei wirtschaftlichen Fragestellungen oder überall dort,
+          wo aus größeren Datenmengen Muster, Abweichungen oder Entwicklungen
+          erkennbar werden sollen.
+        </p>
+
+        <p>
+          Interessant ist dabei oft nicht nur das Ergebnis, sondern auch die Frage,
+          wie verlässlich es zustande gekommen ist. Wer Daten auswertet, sollte
+          immer auch verstehen, wo sie herkommen und welche Grenzen sie haben.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <h2 class="mb-6 font-serif text-3xl">Werkzeuge &amp; Denkweise</h2>
+
+        <div class="space-y-4 leading-relaxed text-textsub">
+          <p>
+            Für die praktische Arbeit können Tabellenkalkulationen, Datenbanken,
+            SQL-Abfragen, kleine Programme oder spezialisierte Werkzeuge sinnvoll sein.
+            Dazu gehören je nach Fragestellung auch Werkzeuge wie
+            <span class="text-textmain">R mit RStudio</span> oder
+            <span class="text-textmain">KNIME</span>, wenn Daten nicht nur gespeichert,
+            sondern bereinigt, untersucht und in nachvollziehbare Auswertungen überführt
+            werden sollen.
+          </p>
+
+          <p>
+            Entscheidend ist dabei weniger das einzelne Werkzeug als die Fähigkeit,
+            Daten sauber zu ordnen, Auswertungen verständlich aufzubauen und Ergebnisse
+            kritisch zu prüfen.
+          </p>
+
+          <p>
+            Gerade in der Analyse hilft es, nicht nur nach einer schnellen Grafik oder
+            einer Kennzahl zu suchen, sondern zuerst zu verstehen, welche Frage überhaupt
+            beantwortet werden soll.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-6 py-16">
+      <h2 class="mb-6 font-serif text-3xl">Notizen &amp; Einstiege</h2>
+
+      <ul class="space-y-3 text-textsub">
+        <li>• Daten bereinigen, bevor man sie interpretiert</li>
+        <li>• Unterschiede zwischen Messwert, Beobachtung und Schlussfolgerung ernst nehmen</li>
+        <li>• Statistik als Hilfsmittel statt als bloße Formelwelt verstehen</li>
+        <li>• Visualisierung erst dann einsetzen, wenn die Struktur klar genug ist</li>
+        <li>• Herkunft und Qualität der Daten immer mitdenken</li>
+      </ul>
+
+      <p class="mt-6">
+        <a
+          href="/de/notizen/"
+          class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent"
+        >
+          Weiter zu den Notizen
+        </a>
+      </p>
+    </section>
+  </main>
 </body>
 </html>
