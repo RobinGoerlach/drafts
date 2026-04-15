@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenanalyse – Robin Görlach</title>
+  <meta name="description" content="Datenanalyse" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+          boxShadow: {
+            soft: "0 6px 18px rgba(43,47,51,0.06)",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-paper text-textmain font-sans">
+<header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="flex h-16 items-center justify-between">
+      <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
+<a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
+<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
+<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
+<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+      <div class="flex items-center gap-4">
+        <div class="hidden text-sm text-textsub sm:block">
+          <span class="text-textmain">DE</span>
+          <span class="mx-1 text-black/20">|</span>
+          <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
+        </div>
+        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
+      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
+<a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
+<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
+<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
+<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+    </div>
+  </div>
+</header><main><section class="mx-auto max-w-5xl px-6 py-16"><h1 class="mb-6 font-serif text-4xl">Datenanalyse</h1><p class="leading-relaxed text-textsub">Diese Seite ist als nächste Ausbaustufe vorgesehen und dient im aktuellen Stand als Platzhalter.</p></section></main>
+<footer class="border-t border-black/10 py-8">
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+    <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/en/index.html" class="hover:text-accent transition-colors">English</a></nav>
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isHidden = mobileMenu.classList.contains("hidden");
+    mobileMenu.classList.toggle("hidden");
+    menuToggle.setAttribute("aria-expanded", String(isHidden));
+  });
+}
+</script>
+</body>
+</html>

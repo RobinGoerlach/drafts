@@ -4,98 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Link Collection – Robin Görlach</title>
-  <meta name="description" content="A grown collection of references, finds and useful pointers." />
+  <meta name="description" content="A growing collection of references, useful finds and practical pointers." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: {
-      colors: { paper: '#F5F3EE', section: '#E7E2D8', textmain: '#2B2F33', textsub: '#4E5B61', accent: '#1F4E5F' },
-      fontFamily: { sans: ['Inter','sans-serif'], serif: ['"Source Serif 4"','serif'] },
-      boxShadow: { soft: '0 6px 18px rgba(43, 47, 51, 0.06)' }
-    } } }
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+          boxShadow: {
+            soft: "0 6px 18px rgba(43,47,51,0.06)",
+          },
+        },
+      },
+    };
   </script>
 </head>
 <body class="bg-paper text-textmain font-sans">
-  <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
-    <div class="mx-auto max-w-6xl px-6"><div class="flex h-16 items-center justify-between">
+<header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="flex h-16 items-center justify-between">
       <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
-      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex">
-        <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
-        <a href="/en/projects/" class="hover:text-accent transition-colors">Projects</a>
-        <a href="/en/notes/" class="hover:text-accent transition-colors">Notes</a>
-        <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
-        <a href="/en/link-collection.html" class="text-textmain">Link Collection</a>
-        <a href="/en/about/" class="hover:text-accent transition-colors">About</a>
-        <a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a>
-      </nav>
-      <div class="hidden text-sm text-textsub sm:block"><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">DE</a><span class="mx-1 text-black/20">|</span><a href="/en/link-collection.html" class="text-textmain">EN</a></div>
-    </div></div>
-  </header>
-  <main>
-    <section class="mx-auto max-w-5xl px-6 py-14 md:py-18">
-      <div class="max-w-3xl">
-        <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Collection</p>
-        <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Link Collection</h1>
-        <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
-          <p>This is a selection of references, finds and pointers that have turned out to be useful over time. Some of them are technical, others are simply practical.</p>
-          <p>Not everything here is new, and not every link will matter equally to every visitor. Still, some resources remain helpful for years, and that is what this collection is for.</p>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+<a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a>
+<a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
+<a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
+<a href="/en/link-collection.html" class="text-textmain">Links</a>
+<a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a>
+<a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
+      <div class="flex items-center gap-4">
+        <div class="hidden text-sm text-textsub sm:block">
+          <span class="text-textmain">EN</span>
+          <span class="mx-1 text-black/20">|</span>
+          <a href="/de/index.html" class="hover:text-accent transition-colors">DE</a>
         </div>
+        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
       </div>
-    </section>
-    <section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Profiles</h2><p class="text-textsub leading-relaxed">A few public places where projects, professional traces and some older work can still be found.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5">
-      <li><a href="https://github.com/RobinGoerlach" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">GitHub</a><span class="text-textsub"> – source code, experiments and a number of projects collected over time.</span></li>
-      <li><a href="https://www.linkedin.com/in/robin-goerlach" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">LinkedIn</a><span class="text-textsub"> – the more conventional professional outside view for anyone looking for a structured overview.</span></li>
-      <li><a href="https://www.xing.com/profile/Robin_Goerlach" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Xing</a><span class="text-textsub"> – not equally relevant everywhere anymore, but still part of the wider picture.</span></li>
-    </ul></div></div></section>
-    <section class="py-16"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Linux &amp; Administration</h2><p class="text-textsub leading-relaxed">References related to Linux, server work, infrastructure and security tools that remain useful in everyday work.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5">
-      <li><a href="https://www.kernel.org/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">The Linux Kernel Archives</a><span class="text-textsub"> – the official source for the kernel itself and a good place to start when getting closer to Linux fundamentals.</span></li>
-      <li><a href="https://man7.org/linux/man-pages/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linux Manual Pages</a><span class="text-textsub"> – dry at times, but often the most reliable place when commands and system details matter.</span></li>
-      <li><a href="https://linuxize.com/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linuxize</a><span class="text-textsub"> – readable tutorials for administration work and common Linux tasks.</span></li>
-      <li><a href="https://wiki.archlinux.org/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">ArchWiki</a><span class="text-textsub"> – useful even without running Arch Linux, because many explanations are clear and direct.</span></li>
-      <li><a href="https://httpd.apache.org/docs/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Apache HTTP Server Documentation</a><span class="text-textsub"> – still a solid reference for classic web server configuration, modules and troubleshooting.</span></li>
-      <li><a href="https://documentation.wazuh.com/current/index.html" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Wazuh Documentation</a><span class="text-textsub"> – entry point and reference for an open security platform focused on monitoring, analysis and response. citeturn282553search1turn282553search17</span></li>
-      <li><a href="https://cisofy.com/documentation/lynis/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Lynis</a><span class="text-textsub"> – useful for audits, hardening and a structured view of Linux and Unix systems. citeturn282553search2turn282553search6</span></li>
-      <li><a href="https://www.proxmox.com/en/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Proxmox</a><span class="text-textsub"> – practical for virtualization, testing and the operation of small to medium environments.</span></li>
-    </ul></div></div></section>
-    <section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Software &amp; Programming</h2><p class="text-textsub leading-relaxed">Languages, frameworks and documentation I keep returning to, or which are useful for my own projects.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5">
-      <li><a href="https://selfhtml.org" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">SELFHTML</a><span class="text-textsub"> – still a pleasant German-language reference for web fundamentals and many practical questions.</span></li>
-      <li><a href="https://developer.mozilla.org/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">MDN Web Docs</a><span class="text-textsub"> – often the first stop when it comes to solid documentation for HTML, CSS and JavaScript.</span></li>
-      <li><a href="https://react.dev/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">React Documentation</a><span class="text-textsub"> – the current official documentation for component-based interfaces in the browser.</span></li>
-      <li><a href="https://nodejs.org/en/docs" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Node.js Documentation</a><span class="text-textsub"> – reference material for server-side JavaScript, tooling and the runtime itself.</span></li>
-      <li><a href="https://tailwindcss.com/docs" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Tailwind CSS Documentation</a><span class="text-textsub"> – useful when layouts and components should come together quickly while staying consistent.</span></li>
-      <li><a href="https://daisyui.com/docs/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">DaisyUI Documentation</a><span class="text-textsub"> – more of a component inspiration source than something every project has to depend on.</span></li>
-      <li><a href="https://docs.spring.io/spring-boot/index.html" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Spring Boot Documentation</a><span class="text-textsub"> – a useful reference for modern Java applications and services. citeturn282553search3turn282553search19</span></li>
-      <li><a href="https://tomcat.apache.org/tomcat-9.0-doc/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Tomcat Documentation</a><span class="text-textsub"> – still useful whenever classic Java web applications and servlet containers matter.</span></li>
-      <li><a href="https://docs.docker.com/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Docker Documentation</a><span class="text-textsub"> – helpful for containers, testing environments and reproducible development setups.</span></li>
-      <li><a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">OWASP Top 10</a><span class="text-textsub"> – a useful starting point for looking at web application risks in a structured way; the current released version is 2025. citeturn282553search8</span></li>
-      <li><a href="https://cheatsheetseries.owasp.org/index.html" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">OWASP Cheat Sheet Series</a><span class="text-textsub"> – concise, practical guidance for common security topics in development and operations. citeturn282553search20</span></li>
-    </ul></div></div></section>
-    <section class="py-16"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Data &amp; Databases</h2><p class="text-textsub leading-relaxed">Databases and related tools that help turn information into something usable rather than simply stored.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5">
-      <li><a href="https://dev.mysql.com/doc/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">MySQL Documentation</a><span class="text-textsub"> – a long-standing reference for many web applications and small to medium data solutions.</span></li>
-      <li><a href="https://www.postgresql.org/docs/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">PostgreSQL Documentation</a><span class="text-textsub"> – useful for modern applications, more complex data models and clean SQL work.</span></li>
-      <li><a href="https://www.oracle.com/database/technologies/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Oracle Database</a><span class="text-textsub"> – relevant when larger environments, PL/SQL and classic enterprise databases come into play.</span></li>
-    </ul></div></div></section>
-    <section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Training &amp; Learning</h2><p class="text-textsub leading-relaxed">Platforms and course offerings that can be useful when a topic should be approached in a more systematic way.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5">
-      <li><a href="https://www.linkedin.com/learning" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">LinkedIn Learning</a><span class="text-textsub"> – a broad course catalog with a fairly classic continuing-education feel.</span></li>
-      <li><a href="https://www.udemy.com" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Udemy</a><span class="text-textsub"> – useful when you want a quick first step into a very specific topic.</span></li>
-      <li><a href="https://learn.microsoft.com/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Microsoft Learn</a><span class="text-textsub"> – the more sensible Microsoft entry point today; Channel 9 no longer exists in its old form.</span></li>
-      <li><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:1" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Oracle Learning Library</a><span class="text-textsub"> – labs and material around Oracle technologies.</span></li>
-      <li><a href="https://developer.oracle.com/livelabs/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Oracle LiveLabs</a><span class="text-textsub"> – practical exercises for people who prefer trying things directly.</span></li>
-      <li><a href="https://devgym.oracle.com/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Oracle Dev Gym</a><span class="text-textsub"> – short exercises and deeper practice, especially for SQL and PL/SQL.</span></li>
-      <li><a href="https://www.pluralsight.com" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Pluralsight</a><span class="text-textsub"> – more technical in tone and often useful when a topic should be covered more thoroughly.</span></li>
-      <li><a href="https://www.coursera.org" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Coursera</a><span class="text-textsub"> – a good fit when courses may lean a little more academic or university-backed.</span></li>
-      <li><a href="https://www.edx.org/learn/linux" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">edX Linux Courses</a><span class="text-textsub"> – a useful addition for Linux topics in a more course-oriented format.</span></li>
-      <li><a href="https://training.linuxfoundation.org/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linux Foundation Training</a><span class="text-textsub"> – a good option when Linux and open source topics should be approached more formally and thoroughly.</span></li>
-    </ul></div></div></section>
-    <section class="py-16"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Electronics &amp; Other Finds</h2><p class="text-textsub leading-relaxed">Links to hardware, microcontrollers and a few things that bridge the gap between theory and practice.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5">
-      <li><a href="https://www.arduino.cc/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Arduino</a><span class="text-textsub"> – a good place to start when working practically with microcontrollers, sensors and prototypes.</span></li>
-      <li><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">ESP32 / ESP-IDF</a><span class="text-textsub"> – useful for small networked systems, home automation and compact embedded projects.</span></li>
-      <li><a href="https://www.seamonkey-project.org/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">SeaMonkey</a><span class="text-textsub"> – certainly not for everyone, but a nice reminder that quieter software approaches sometimes stay interesting longer than expected.</span></li>
-    </ul></div></div></section>
-    <section class="py-16"><div class="mx-auto max-w-4xl px-6"><div class="border-t border-black/10 pt-10"><h2 class="mb-4 font-serif text-3xl text-textmain">And otherwise</h2><p class="text-textsub leading-relaxed">This collection is not finished either. Some references will be replaced over time, while others stay useful longer than expected. For international news sources, I would rather create a separate page or a clearly separated section later on, so that technical references and world media do not get mixed unnecessarily.</p></div></div></section>
-  </main>
-  <footer class="border-t border-black/10 py-8"><div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between"><p class="text-sm text-textsub">© 2026 Robin Görlach</p><nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a><a href="/en/about/" class="hover:text-accent transition-colors">About</a><a href="/en/contact/" class="hover:text-accent transition-colors">Contact</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Deutsch</a></nav></div></footer>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
+      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+<a href="/en/projects/index.html" class="hover:text-accent transition-colors">Projects</a>
+<a href="/en/notes/index.html" class="hover:text-accent transition-colors">Notes</a>
+<a href="/en/topics/index.html" class="hover:text-accent transition-colors">Topics</a>
+<a href="/en/link-collection.html" class="text-textmain">Links</a>
+<a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a>
+<a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a></nav>
+    </div>
+  </div>
+</header>
+<main><section class="mx-auto max-w-5xl px-6 py-14 md:py-18"><div class="max-w-3xl"><p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Collection</p><h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Link Collection</h1><div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg"><p>This is a collection of references, useful finds and pointers that have remained helpful over time. Some are technical, others simply practical.</p><p>Not everything here is new, and not every link will matter to every visitor. But some things remain useful for years, and that is exactly what this page is for.</p></div></div></section>
+<section class="py-16 bg-section"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Profiles</h2><p class="text-textsub leading-relaxed">A few public profiles and technical traces around the web.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5"><li><a href="https://github.com/RobinGoerlach" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">GitHub</a><span class="text-textsub"> – Code repositories and technical projects.</span></li><li><a href="https://www.linkedin.com/in/robin-goerlach" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">LinkedIn</a><span class="text-textsub"> – Professional profile with broader international visibility.</span></li><li><a href="https://www.xing.com/profile/Robin_Goerlach" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">XING</a><span class="text-textsub"> – Professional profile in the German-speaking context.</span></li><li><a href="https://stackoverflow.com/users/5277286/robin-goerlach" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Stack Overflow</a><span class="text-textsub"> – Questions, answers and technical breadcrumbs.</span></li></ul></div></div></section><section class="py-16"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Development Resources</h2><p class="text-textsub leading-relaxed">Documentation and references that are useful for web development, backend work and tools.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5"><li><a href="https://developer.mozilla.org" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">MDN Web Docs</a><span class="text-textsub"> – One of the best references for web standards and browser technology.</span></li><li><a href="https://react.dev" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">React Documentation</a><span class="text-textsub"> – Official docs for React.</span></li><li><a href="https://nodejs.org/en/docs" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Node.js Documentation</a><span class="text-textsub"> – Official docs for Node.js.</span></li><li><a href="https://tailwindcss.com/docs" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Tailwind CSS</a><span class="text-textsub"> – Utility-first CSS reference.</span></li><li><a href="https://www.postgresql.org/docs/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">PostgreSQL Documentation</a><span class="text-textsub"> – Official PostgreSQL documentation.</span></li><li><a href="https://dev.mysql.com/doc/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">MySQL Documentation</a><span class="text-textsub"> – Official MySQL documentation.</span></li><li><a href="https://httpd.apache.org/docs/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Apache HTTP Server</a><span class="text-textsub"> – Docs for the Apache web server.</span></li><li><a href="https://docs.docker.com/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Docker Documentation</a><span class="text-textsub"> – Reference for containers, images and operation.</span></li></ul></div></div></section><section class="py-16 bg-section"><div class="mx-auto max-w-5xl px-6"><div class="mb-8 max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Linux & Administration</h2><p class="text-textsub leading-relaxed">References around Linux, server operation, infrastructure and practical administration.</p></div><div class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft"><ul class="space-y-5"><li><a href="https://www.kernel.org/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">The Linux Kernel Archives</a><span class="text-textsub"> – Official source for kernel releases and background.</span></li><li><a href="https://linuxize.com/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linuxize</a><span class="text-textsub"> – Practical tutorials for Linux users and administrators.</span></li><li><a href="https://man7.org/linux/man-pages/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Linux Manual Pages</a><span class="text-textsub"> – Man pages and system documentation.</span></li><li><a href="https://wiki.archlinux.org/" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">ArchWiki</a><span class="text-textsub"> – Useful far beyond Arch Linux itself.</span></li><li><a href="https://www.proxmox.com/en/proxmox-virtual-environment/overview" target="_blank" rel="noreferrer" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Proxmox VE</a><span class="text-textsub"> – Virtualisation and administration for smaller and medium-sized environments.</span></li></ul></div></div></section>
+</main>
+
+<footer class="border-t border-black/10 py-8">
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+    <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/en/index.html" class="hover:text-accent transition-colors">Home</a><a href="/en/about/index.html" class="hover:text-accent transition-colors">About</a><a href="/en/contact/index.html" class="hover:text-accent transition-colors">Contact</a><a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a><a href="/de/index.html" class="hover:text-accent transition-colors">Deutsch</a></nav>
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isHidden = mobileMenu.classList.contains("hidden");
+    mobileMenu.classList.toggle("hidden");
+    menuToggle.setAttribute("aria-expanded", String(isHidden));
+  });
+}
+</script>
 </body>
 </html>

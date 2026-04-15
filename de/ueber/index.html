@@ -3,9 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placeholder</title>
+  <title>Über – Robin Görlach</title>
+  <meta name="description" content="Ein paar Worte zu Robin Görlach und seinem Weg durch Technik, Systeme und andere Themen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#F5F3EE",
+            section: "#E7E2D8",
+            textmain: "#2B2F33",
+            textsub: "#4E5B61",
+            accent: "#1F4E5F",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+          },
+          boxShadow: {
+            soft: "0 6px 18px rgba(43,47,51,0.06)",
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <p>Placeholder page.</p>
+<body class="bg-paper text-textmain font-sans">
+<header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="flex h-16 items-center justify-between">
+      <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
+<a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
+<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
+<a href="/de/ueber/index.html" class="text-textmain">Über</a>
+<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+      <div class="flex items-center gap-4">
+        <div class="hidden text-sm text-textsub sm:block">
+          <span class="text-textmain">DE</span>
+          <span class="mx-1 text-black/20">|</span>
+          <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
+        </div>
+        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
+      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
+<a href="/de/notizen/index.html" class="hover:text-accent transition-colors">Notizen</a>
+<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
+<a href="/de/ueber/index.html" class="text-textmain">Über</a>
+<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+    </div>
+  </div>
+</header>
+<main>
+<section class="mx-auto max-w-5xl px-6 py-14 md:py-20"><div class="max-w-3xl"><p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Über</p><h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Ein paar Worte zu mir</h1><div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg"><p>Ich beschäftige mich seit langer Zeit mit Technik, Systemen, Programmierung und den vielen praktischen Fragen, die sich darum herum ergeben. Ein Teil davon ist beruflich geprägt, anderes kommt aus Neugier, aus eigenem Bedarf oder einfach aus dem Wunsch, Dinge besser zu verstehen.</p><p>Diese Seite ist ein Ort für Arbeiten, Notizen, Themen und Dinge, zu denen ich immer wieder zurückkehre. Vieles ist im Lauf der Zeit gewachsen, manches eher nebenbei, anderes mit größerem Aufwand.</p></div></div></section>
+<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Wie das angefangen hat</h2><div class="space-y-4 text-textsub leading-relaxed"><p>Angefangen hat vieles nicht mit einem modernen Rechner, sondern mit einem programmierbaren Taschenrechner und dem Wunsch, wiederkehrende Rechenarbeit etwas bequemer zu machen. Von dort ging es über frühe Heim- und Personalcomputer, Erweiterungskarten, CP/M, Turbo Pascal und verschiedene mathematische und technische Anwendungen Schritt für Schritt weiter.</p><p>Später kamen Datenbanken, Modems, Mailboxen, Unix-Systeme, Linux, Webserver, Programmiersprachen und sehr unterschiedliche Werkzeuge dazu. Manche davon sind geblieben, andere waren eher Stationen auf dem Weg. Zusammen ergeben sie aber einen Blick auf Technik, der nicht nur aus einem einzigen Stack oder einer einzigen Zeit stammt.</p><p>Vielleicht ist genau das ein Teil dessen, was mich bis heute daran interessiert: Technik verändert sich, aber viele Fragen bleiben. Wie baut man etwas so, dass es verständlich bleibt? Wie hält man Systeme stabil? Welche Werkzeuge sind wirklich hilfreich, und welche sehen nur für kurze Zeit gut aus?</p></div></div></div></section>
+<section class="py-16"><div class="mx-auto max-w-5xl px-6"><div class="max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Wie ich an Dinge herangehe</h2><div class="space-y-4 text-textsub leading-relaxed"><p>Ich mag Lösungen, die nachvollziehbar bleiben. Nicht alles muss kompliziert sein, nur weil es technisch klingt. Umgekehrt hilft auch nicht jede schnelle Abkürzung, wenn man später nicht mehr versteht, warum etwas überhaupt funktioniert.</p><p>Mir liegen deshalb eher Dinge, die mit etwas Ruhe aufgebaut werden: klare Strukturen, brauchbare Werkzeuge, solide Systeme und Dokumentation, die nicht nur einmal geschrieben und dann vergessen wird. Das heißt nicht, dass immer alles groß geplant sein muss. Aber ein gewisser Überblick, etwas Bodenhaftung und die Bereitschaft zum Nachdenken sparen oft mehr Zeit, als hektisches Herumprobieren je gewinnen kann.</p><p>Vielleicht merkt man dem Ganzen an, dass ich Technik nicht nur als Beruf oder als Hobby sehe, sondern auch als etwas, das über viele Jahre hinweg zum eigenen Alltag gehört hat. Das führt nicht automatisch zu großen Wahrheiten, aber vielleicht zu etwas Gelassenheit.</p></div></div></div></section>
+<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="max-w-3xl"><h2 class="mb-4 font-serif text-3xl text-textmain">Was hier sonst noch Platz hat</h2><div class="space-y-4 text-textsub leading-relaxed"><p>Nicht alles auf dieser Seite dreht sich nur um IT. Mit der Zeit haben auch andere Themen ihren Platz gefunden: Elektronik, Daten, Garten, Pflanzen, Kochen, Reisen und manches mehr. Auf den ersten Blick passt das vielleicht nicht immer zusammen. Auf den zweiten Blick hängt aber vieles stärker mit dem Alltag zusammen, als es zunächst scheint.</p><p>Diese Mischung ist also kein Versehen. Sie gehört eher dazu. Nicht alles braucht denselben Rahmen, aber manches ist gerade deshalb interessant, weil es nicht nur aus einer einzigen Richtung betrachtet wird.</p></div></div></div></section>
+<section class="py-16"><div class="mx-auto max-w-5xl px-6"><div class="max-w-3xl border-t border-black/10 pt-10"><h2 class="mb-4 font-serif text-3xl text-textmain">Und wenn es konkreter werden soll</h2><div class="space-y-4 text-textsub leading-relaxed"><p>Wer lieber direkt auf konkrete Arbeiten, Ideen und Vorhaben schaut, findet eine Auswahl davon auf der Projektseite. Dort geht es weniger um den Weg dorthin und mehr um das, was daraus geworden ist oder noch werden soll.</p><p><a href="/de/projekte/index.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Hier geht es zu den Projekten.</a></p></div></div></div></section>
+</main>
+
+<footer class="border-t border-black/10 py-8">
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+    <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/en/index.html" class="hover:text-accent transition-colors">English</a></nav>
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isHidden = mobileMenu.classList.contains("hidden");
+    mobileMenu.classList.toggle("hidden");
+    menuToggle.setAttribute("aria-expanded", String(isHidden));
+  });
+}
+</script>
 </body>
 </html>

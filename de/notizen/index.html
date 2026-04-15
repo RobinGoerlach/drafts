@@ -3,20 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Notizen – Robin Görlach</title>
-  <meta
-    name="description"
-    content="Technische Notizen, Hinweise und Fundstücke, die im Alltag nützlich sind und später schnell wiedergefunden werden sollen."
-  />
-
+  <meta name="description" content="Technische Notizen, Gedanken und Fundstücke, die im Alltag hilfreich sind." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,306 +25,84 @@
             serif: ['"Source Serif 4"', "serif"],
           },
           boxShadow: {
-            soft: "0 6px 18px rgba(43, 47, 51, 0.06)",
+            soft: "0 6px 18px rgba(43,47,51,0.06)",
           },
         },
       },
     };
   </script>
 </head>
-
 <body class="bg-paper text-textmain font-sans">
-  <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="flex h-16 items-center justify-between">
-        <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">
-          Robin Görlach
-        </a>
-
-        <nav class="hidden items-center gap-6 text-sm text-textsub md:flex">
-          <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-          <a href="/de/projekte/" class="hover:text-accent transition-colors">Projekte</a>
-          <a href="/de/notizen/" class="text-textmain">Notizen</a>
-          <a href="/de/themen/" class="hover:text-accent transition-colors">Themen</a>
-          <a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-          <a href="/de/ueber/" class="hover:text-accent transition-colors">Über</a>
-          <a href="/de/kontakt/" class="hover:text-accent transition-colors">Kontakt</a>
-        </nav>
-
-        <div class="flex items-center gap-4">
-          <div class="hidden text-sm text-textsub sm:block">
-            <a href="/de/notizen/" class="text-textmain">DE</a>
-            <span class="mx-1 text-black/20">|</span>
-            <a href="/en/notes/" class="hover:text-accent transition-colors">EN</a>
-          </div>
-
-          <button
-            id="menu-toggle"
-            type="button"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden"
-            aria-label="Menü öffnen"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
-            </svg>
-          </button>
+<header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="flex h-16 items-center justify-between">
+      <a href="/de/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
+      <nav class="hidden items-center gap-6 text-sm text-textsub md:flex"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
+<a href="/de/notizen/index.html" class="text-textmain">Notizen</a>
+<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
+<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
+<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
+      <div class="flex items-center gap-4">
+        <div class="hidden text-sm text-textsub sm:block">
+          <span class="text-textmain">DE</span>
+          <span class="mx-1 text-black/20">|</span>
+          <a href="/en/index.html" class="hover:text-accent transition-colors">EN</a>
         </div>
-      </div>
-
-      <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
-        <nav class="flex flex-col gap-3 text-sm text-textsub">
-          <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-          <a href="/de/projekte/" class="hover:text-accent transition-colors">Projekte</a>
-          <a href="/de/notizen/" class="text-textmain">Notizen</a>
-          <a href="/de/themen/" class="hover:text-accent transition-colors">Themen</a>
-          <a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-          <a href="/de/ueber/" class="hover:text-accent transition-colors">Über</a>
-          <a href="/de/kontakt/" class="hover:text-accent transition-colors">Kontakt</a>
-          <div class="pt-2 text-textsub">
-            <a href="/de/notizen/" class="text-textmain">DE</a>
-            <span class="mx-1 text-black/20">|</span>
-            <a href="/en/notes/" class="hover:text-accent transition-colors">EN</a>
-          </div>
-        </nav>
+        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-black/10 text-textmain md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
       </div>
     </div>
-  </header>
-
-  <main>
-    <section class="mx-auto max-w-5xl px-6 py-14 md:py-20">
-      <div class="max-w-3xl">
-        <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">
-          Sammlung
-        </p>
-
-        <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">
-          Notizen
-        </h1>
-
-        <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
-          <p>
-            Nicht alles braucht einen eigenen Artikel oder eine sauber ausgearbeitete Struktur.
-            Manche Dinge sind zu klein dafür, zu speziell oder einfach zu nützlich, um sie
-            erst später aufzuschreiben. Genau dafür ist diese Seite gedacht.
-          </p>
-
-          <p>
-            Hier sammeln sich Hinweise, kleine Checklisten, technische Beobachtungen,
-            Fundstücke und Gedanken, die sich im Alltag als brauchbar erwiesen haben.
-            Ein Teil ist eher für mich selbst als Gedächtnisstütze gedacht, ein anderer
-            Teil kann vielleicht auch für andere hilfreich sein.
-          </p>
-
-          <p>
-            Der Nutzwert steht hier deutlich vor der Vollständigkeit. Es geht also weniger
-            um perfekte Texte als um Dinge, die später schnell wiedergefunden werden können
-            und im richtigen Moment tatsächlich weiterhelfen.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-section py-16">
-      <div class="mx-auto max-w-5xl px-6">
-        <div class="mb-10 max-w-3xl">
-          <h2 class="mb-4 font-serif text-3xl text-textmain">Bereiche</h2>
-          <p class="text-textsub leading-relaxed">
-            Die Notizen sind nicht als starres Archiv gedacht. Eher sind sie eine geordnete
-            Werkbank: manches ist schon recht konkret, anderes besteht erst aus Stichpunkten,
-            kleinen Erinnerungen oder einer Handvoll nützlicher Verweise.
-          </p>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2">
-          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
-            <h3 class="mb-3 font-serif text-2xl text-textmain">Linux &amp; Administration</h3>
-            <p class="mb-4 leading-relaxed text-textsub">
-              Praktische Dinge rund um Systeme, Konfiguration, Fehlersuche und Betrieb.
-              Gerade bei Linux, Apache, Diensten und kleineren Infrastrukturen lohnt es sich,
-              wiederkehrende Muster einmal ordentlich festzuhalten.
-            </p>
-            <ul class="space-y-3 text-textsub">
-              <li>
-                <a href="/de/themen/linux/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  SSH-Key-Probleme sauber eingrenzen
-                </a>
-                – typische Fehlerbilder, Rechte auf Dateien und Verzeichnissen sowie die Stellen,
-                an denen die Fehlersuche meist zuerst lohnt.
-              </li>
-              <li>
-                <a href="/de/themen/linux/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  Apache-Konfiguration prüfen
-                </a>
-                – eine kleine Denk- und Prüfliste für Konfigurationsfehler, virtuelle Hosts,
-                Pfade, Berechtigungen und die Frage, wo der Fehler wirklich liegt.
-              </li>
-              <li>
-                <a href="/de/themen/linux/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  Dienste, Logs und Reihenfolgen verstehen
-                </a>
-                – Notizen dazu, wie man bei einem Problem nicht blind alles gleichzeitig anfasst,
-                sondern mit etwas Ruhe Schritt für Schritt vorgeht.
-              </li>
-            </ul>
-          </article>
-
-          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
-            <h3 class="mb-3 font-serif text-2xl text-textmain">Programmierung &amp; Werkzeuge</h3>
-            <p class="mb-4 leading-relaxed text-textsub">
-              Dinge aus Entwicklung und Fehlersuche, die nicht immer groß genug für eine eigene
-              Dokumentation sind, aber oft genau dann fehlen, wenn man sie braucht.
-            </p>
-            <ul class="space-y-3 text-textsub">
-              <li>
-                <a href="/de/themen/programmierung/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  JavaScript-Debugging im Alltag
-                </a>
-                – ein Überblick darüber, wo man ansetzt, wenn Code zwar läuft, aber nicht das tut,
-                was man erwartet.
-              </li>
-              <li>
-                <a href="/de/themen/programmierung/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  PHP-Fehlerbehandlung pragmatisch aufbauen
-                </a>
-                – wann Logging genügt, wo Exceptions sinnvoll sind und wie man Struktur behält,
-                ohne aus einem kleinen Projekt gleich ein Monstrum zu machen.
-              </li>
-              <li>
-                <a href="/de/themen/programmierung/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  Kleine Helfer für den täglichen Umgang mit Code
-                </a>
-                – Werkzeuge, Editor-Hinweise und Muster, die langfristig mehr bringen als ein
-                einzelner kurzfristiger Trick.
-              </li>
-            </ul>
-          </article>
-
-          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
-            <h3 class="mb-3 font-serif text-2xl text-textmain">Datenbanken &amp; Datenmodelle</h3>
-            <p class="mb-4 leading-relaxed text-textsub">
-              Notizen zu SQL, Struktur, Lesbarkeit und den Fragen, die meist nicht beim ersten,
-              sondern beim dritten oder fünften Blick auf ein Datenmodell interessant werden.
-            </p>
-            <ul class="space-y-3 text-textsub">
-              <li>
-                <a href="/de/themen/datenbanken/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  MySQL-Performance zuerst grob einschätzen
-                </a>
-                – keine Magie, sondern erste sinnvolle Schritte: Indizes, Abfragen, Reihenfolge
-                der Analyse und die Frage, ob das Problem wirklich an MySQL liegt.
-              </li>
-              <li>
-                <a href="/de/themen/datenbanken/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  SQL-Abfragen so schreiben, dass man sie später noch lesen kann
-                </a>
-                – nicht nur schnell zum Ergebnis kommen, sondern eine Form wählen, die Wartung
-                und spätere Erweiterungen nicht unnötig erschwert.
-              </li>
-              <li>
-                <a href="/de/themen/datenbanken/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  Datenmodelle mit Blick auf spätere Auswertungen denken
-                </a>
-                – kleine Erinnerungen daran, warum sich saubere Struktur fast immer auszahlt,
-                selbst wenn das Projekt zunächst ganz überschaubar wirkt.
-              </li>
-            </ul>
-          </article>
-
-          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
-            <h3 class="mb-3 font-serif text-2xl text-textmain">Elektronik, Praxis &amp; Fundstücke</h3>
-            <p class="mb-4 leading-relaxed text-textsub">
-              Nicht alles ist reine Software. Manche Notizen entstehen aus dem Zusammenspiel von
-              Hardware, Mikrocontrollern, Messwerten oder praktischen Fragen, die sich nicht gut
-              in eine enge technische Schublade einsperren lassen.
-            </p>
-            <ul class="space-y-3 text-textsub">
-              <li>
-                <a href="/de/themen/elektronik/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  Arduino und ESP32 als praktische Lern- und Arbeitsumgebung
-                </a>
-                – Hinweise darauf, wo der Einstieg leicht fällt, wo später die Grenzen kommen
-                und warum kleine reale Projekte oft mehr Verständnis schaffen als reine Theorie.
-              </li>
-              <li>
-                <a href="/de/linksammlung.html" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  Werkzeuge und Referenzen, die man ungern jedes Mal neu suchen möchte
-                </a>
-                – Verweise, kleine Fundstücke und Dinge, die im Alltag nicht spektakulär,
-                aber erstaunlich nützlich sind.
-              </li>
-              <li>
-                <a href="/de/themen/" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">
-                  Offene Fragen und halbfertige Gedanken
-                </a>
-                – manches bleibt zunächst bewusst unfertig, weil es erst in Ruhe weiterwachsen
-                muss, bevor sich eine sauberere Form ergibt.
-              </li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16">
-      <div class="mx-auto max-w-4xl px-6">
-        <div class="border-t border-black/10 pt-10">
-          <h2 class="mb-4 font-serif text-3xl text-textmain">Wie diese Seite zu lesen ist</h2>
-          <div class="space-y-4 text-textsub leading-relaxed">
-            <p>
-              Die Notizen sind bewusst etwas lockerer als die übrigen Seiten aufgebaut.
-              Es geht hier weniger um fertige Darstellung als um Wiederauffindbarkeit,
-              Gebrauchswert und den Versuch, Dinge nicht jedes Mal neu zusammensuchen zu müssen.
-            </p>
-            <p>
-              Wahrscheinlich werden manche Einträge später in ausführlichere Themen oder
-              eigene Seiten überführt. Andere bleiben genau hier, weil sie in dieser Form
-              am nützlichsten sind: kurz genug zum schnellen Nachschlagen, aber ausführlich
-              genug, um nicht nur aus einem Stichwort zu bestehen.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-section py-16">
-      <div class="mx-auto max-w-4xl px-6">
-        <div class="max-w-3xl">
-          <h2 class="mb-4 font-serif text-3xl text-textmain">Und sonst</h2>
-          <p class="text-textsub leading-relaxed">
-            Diese Sammlung wird sich mit der Zeit verändern. Manche Dinge werden ergänzt,
-            manche zusammengeführt, anderes fällt vielleicht wieder heraus. Entscheidend ist
-            weniger Vollständigkeit als die Frage, ob etwas in der Praxis weiterhilft.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-black/10 py-8">
-    <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
-      <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
-      <nav class="flex flex-wrap gap-4 text-sm text-textsub">
-        <a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
-        <a href="/de/themen/" class="hover:text-accent transition-colors">Themen</a>
-        <a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
-        <a href="/en/notes/" class="hover:text-accent transition-colors">English</a>
-      </nav>
+    <div id="mobile-menu" class="hidden border-t border-black/10 py-4 md:hidden">
+      <nav class="flex flex-col gap-3 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a>
+<a href="/de/projekte/index.html" class="hover:text-accent transition-colors">Projekte</a>
+<a href="/de/notizen/index.html" class="text-textmain">Notizen</a>
+<a href="/de/themen/index.html" class="hover:text-accent transition-colors">Themen</a>
+<a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a>
+<a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a>
+<a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a></nav>
     </div>
-  </footer>
+  </div>
+</header>
+<main>
+<section class="mx-auto max-w-5xl px-6 py-14 md:py-20">
+  <div class="max-w-3xl">
+    <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Sammlung</p>
+    <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Notizen</h1>
+    <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
+      <p>Nicht alles braucht einen eigenen Artikel oder eine saubere Struktur. Manche Dinge sind einfach zu klein, zu speziell oder zu situativ.</p>
+      <p>Diese Seite ist eine Sammlung solcher Notizen – Dinge, die sich im Alltag als nützlich erwiesen haben oder die man später schneller hier wiederfindet als über eine Suchmaschine. Der Nutzwert ist wichtiger als Vollständigkeit.</p>
+      <p>Mit der Zeit kann daraus mehr werden: kleine Dokumentationen, praktische Einstiege, Listen, Fundstücke oder Hinweise, die genau dann helfen, wenn man sie braucht.</p>
+    </div>
+  </div>
+</section>
+<section class="bg-section py-16"><div class="mx-auto max-w-5xl px-6"><div class="grid gap-6 md:grid-cols-2">
+<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Linux & Administration</h2><p class="mb-4 leading-relaxed text-textsub">Kurze Hilfen zu typischen Alltagsfragen rund um Server, Dienste, Konfigurationen und Fehlerbilder.</p><ul class="space-y-3 text-textsub"><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">SSH-Key-Probleme beheben</a> – typische Ursachen und schnelle Lösungswege.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Apache-Konfiguration prüfen</a> – eine kleine Checkliste für Fehlersuche und Validierung.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Systemdienste nachvollziehbar dokumentieren</a> – weniger Rätselraten bei späteren Änderungen.</li></ul></article>
+<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Programmierung & Werkzeuge</h2><p class="mb-4 leading-relaxed text-textsub">Notizen zu Debugging, kleinen Stolpersteinen, Werkzeugen und Dingen, die man besser einmal sauber festhält.</p><ul class="space-y-3 text-textsub"><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">JavaScript-Debugging</a> – Werkzeuge, Denkwege und sinnvolle erste Schritte.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">PHP-Fehlerhandling</a> – strukturierter Umgang mit Fehlern statt verstreuter Sonderfälle.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Werkzeuge, die beim Refactoring helfen</a> – kleine Hilfen mit großem Effekt.</li></ul></article>
+<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Datenbanken & Datenmodelle</h2><p class="mb-4 leading-relaxed text-textsub">Praktische Notizen für Abfragen, Strukturen, Performance und das Wiedererkennen alter Denkfehler.</p><ul class="space-y-3 text-textsub"><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">MySQL-Performance prüfen</a> – erste Schritte zur Eingrenzung von Engpässen.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">SQL-Abfragen strukturieren</a> – lesbar und wartbar bleiben.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Datenmodelle ruhig aufbauen</a> – früh nachdenken spart später Umbauten.</li></ul></article>
+<article class="rounded-sm border border-black/10 bg-paper p-6"><h2 class="mb-3 font-serif text-2xl text-textmain">Elektronik, Praxis & Fundstücke</h2><p class="mb-4 leading-relaxed text-textsub">Kleine Hinweise, technische Beobachtungen und Dinge, die irgendwo zwischen Hardware, Alltag und Werkstatt liegen.</p><ul class="space-y-3 text-textsub"><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Arduino- oder ESP32-Idee festhalten</a> – bevor sie wieder im Kopf verschwindet.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Messwerte sinnvoll erfassen</a> – lieber früh über Struktur nachdenken.</li><li><a href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4">Kleine Helfer, die sich bewährt haben</a> – nicht spektakulär, aber nützlich.</li></ul></article>
+</div></div></section>
+<section class="py-16"><div class="mx-auto max-w-4xl px-6"><div class="border-t border-black/10 pt-10"><h2 class="mb-4 font-serif text-3xl text-textmain">Und sonst</h2><p class="text-textsub leading-relaxed">Diese Sammlung wird sich mit der Zeit verändern. Manche Notizen werden später in eigene Themen überführt, andere bleiben genau hier, weil sie in dieser Form am nützlichsten sind.</p></div></div></section>
+</main>
 
-  <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener("click", () => {
-        const isHidden = mobileMenu.classList.contains("hidden");
-        mobileMenu.classList.toggle("hidden");
-        menuToggle.setAttribute("aria-expanded", String(isHidden));
-      });
-    }
-  </script>
+<footer class="border-t border-black/10 py-8">
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+    <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+    <nav class="flex flex-wrap gap-4 text-sm text-textsub"><a href="/de/index.html" class="hover:text-accent transition-colors">Start</a><a href="/de/ueber/index.html" class="hover:text-accent transition-colors">Über</a><a href="/de/kontakt/index.html" class="hover:text-accent transition-colors">Kontakt</a><a href="/de/linksammlung.html" class="hover:text-accent transition-colors">Linksammlung</a><a href="/en/index.html" class="hover:text-accent transition-colors">English</a></nav>
+  </div>
+</footer>
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isHidden = mobileMenu.classList.contains("hidden");
+    mobileMenu.classList.toggle("hidden");
+    menuToggle.setAttribute("aria-expanded", String(isHidden));
+  });
+}
+</script>
 </body>
 </html>
