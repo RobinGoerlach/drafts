@@ -1,11 +1,162 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placeholder</title>
+  <title>Contact – Robin Görlach</title>
+  <meta name="description" content="Contact information for Robin Görlach." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F5F3EE',
+            section: '#E7E2D8',
+            textmain: '#2B2F33',
+            textsub: '#4E5B61',
+            accent: '#1F4E5F',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"Source Serif 4"', 'serif'],
+          },
+          boxShadow: {
+            soft: '0 6px 18px rgba(43, 47, 51, 0.06)',
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <p>Placeholder page.</p>
+<body class="bg-paper text-textmain font-sans">
+  <header class="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/en/index.html" class="font-serif text-xl tracking-tight text-textmain">Robin Görlach</a>
+        <nav class="hidden items-center gap-6 text-sm text-textsub md:flex">
+          <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+          <a href="/en/projects/" class="hover:text-accent transition-colors">Projects</a>
+          <a href="/en/notes/" class="hover:text-accent transition-colors">Notes</a>
+          <a href="/en/topics/" class="hover:text-accent transition-colors">Topics</a>
+          <a href="/en/link-collection.html" class="hover:text-accent transition-colors">Links</a>
+          <a href="/en/about/" class="hover:text-accent transition-colors">About</a>
+          <a href="/en/contact/" class="text-textmain">Contact</a>
+        </nav>
+        <div class="hidden text-sm text-textsub sm:block">
+          <a href="/de/kontakt/" class="hover:text-accent transition-colors">DE</a>
+          <span class="mx-1 text-black/20">|</span>
+          <a href="/en/contact/" class="text-textmain">EN</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-5xl px-6 py-14 md:py-20">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm uppercase tracking-[0.16em] text-textsub">Contact</p>
+        <h1 class="font-serif text-4xl leading-tight text-textmain md:text-5xl">Get in touch</h1>
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-textsub md:text-lg">
+          <p>
+            If you would like to get in touch, the following channels are the easiest way to do so.
+            Email is usually the simplest option.
+          </p>
+          <p>
+            To make scraping a little less attractive, the email address and phone number
+            are assembled in the browser rather than exposed as plain text in the HTML.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section py-16">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <h2 class="mb-3 font-serif text-2xl text-textmain">Email</h2>
+            <p class="leading-relaxed text-textsub">Email is usually the easiest way to reach me.</p>
+            <p class="mt-4 leading-relaxed">
+              <a id="email-link" href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Show address</a>
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <h2 class="mb-3 font-serif text-2xl text-textmain">Location</h2>
+            <p class="leading-relaxed text-textsub">
+              Nieder-Ramstädter-Straße 219a<br />
+              64285 Darmstadt
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <h2 class="mb-3 font-serif text-2xl text-textmain">Phone</h2>
+            <p class="leading-relaxed text-textsub">Not always the fastest channel, but available.</p>
+            <p class="mt-4 leading-relaxed">
+              <a id="phone-link" href="#" class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent">Show number</a>
+            </p>
+          </article>
+
+          <article class="rounded-sm border border-black/10 bg-paper p-6 shadow-soft">
+            <h2 class="mb-3 font-serif text-2xl text-textmain">Profiles</h2>
+            <ul class="space-y-3 text-textsub">
+              <li><a class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent" href="https://www.linkedin.com/in/robin-goerlach/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent" href="https://www.xing.com/profile/Robin_Goerlach" target="_blank" rel="noreferrer">XING</a></li>
+              <li><a class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent" href="https://github.com/RobinGoerlach" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a class="font-medium text-textmain underline decoration-black/30 underline-offset-4 hover:text-accent hover:decoration-accent" href="https://stackoverflow.com/users/5277286/robin-goerlach" target="_blank" rel="noreferrer">Stack Overflow</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-4xl px-6">
+        <div class="border-t border-black/10 pt-10">
+          <p class="text-textsub leading-relaxed">
+            Not everything is always instantly available or perfectly up to date,
+            but the main ways to reach me are listed here.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10 py-8">
+    <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+      <p class="text-sm text-textsub">© 2026 Robin Görlach</p>
+      <nav class="flex flex-wrap gap-4 text-sm text-textsub">
+        <a href="/en/index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="/en/about/" class="hover:text-accent transition-colors">About</a>
+        <a href="/en/projects/" class="hover:text-accent transition-colors">Projects</a>
+        <a href="/de/kontakt/" class="hover:text-accent transition-colors">Deutsch</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const emailUser = 'info';
+      const emailDomain = 'robin-goerlach.de';
+      const email = `${emailUser}@${emailDomain}`;
+      const emailLink = document.getElementById('email-link');
+      if (emailLink) {
+        emailLink.textContent = email;
+        emailLink.href = `mailto:${email}`;
+      }
+
+      const phoneParts = ['06151', '1591470'];
+      const phone = `${phoneParts[0]} ${phoneParts[1]}`;
+      const phoneHref = `tel:+49${phoneParts[0].replace(/^0/, '')}${phoneParts[1]}`;
+      const phoneLink = document.getElementById('phone-link');
+      if (phoneLink) {
+        phoneLink.textContent = phone;
+        phoneLink.href = phoneHref;
+      }
+    })();
+  </script>
 </body>
 </html>
